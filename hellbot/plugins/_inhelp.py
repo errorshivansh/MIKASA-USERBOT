@@ -158,7 +158,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             else:
                 result = builder.article(
                     text=he_ll,
-                    title="HellBot Alive",
+                    title="MikasaBot Alive",
                     buttons=alv_btn,
                     link_preview=False,
                 )
