@@ -97,7 +97,7 @@ async def kang(args):
                 # pack
                 emoji = splat[1]
 
-        packname = f"{user.username}_Hellbot_{pack}"
+        packname = f"{user.username}_MikasaBot_{pack}"
         packnick = (
             f"{hellbot} Vol.{pack}"
             if hellbot
@@ -449,7 +449,7 @@ async def sticklet(event):
     )
 
     image_stream = io.BytesIO()
-    image_stream.name = "Hellbot.webp"
+    image_stream.name = "MikasaBot.webp"
     image.save(image_stream, "WebP")
     image_stream.seek(0)
 
