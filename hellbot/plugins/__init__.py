@@ -4,7 +4,7 @@ from MikasaBot.config import Config
 from MikasaBot.helpers import *
 from MikasaBot.utils import *
 from MikasaBot.random_strings import *
-from MikasaBot.version import __hell__
+from MikasaBot.version import __mikasa__
 from telethon import version
 
 
@@ -17,7 +17,7 @@ restlo = "./MikasaBot/resources/pics/rest.jpeg"
 shuru = "./MikasaBot/resources/pics/shuru.jpg"
 hl = Config.HANDLER
 shl = Config.SUDO_HANDLER
-hell_ver = __hell__
+hell_ver = __mikasa__
 tel_ver = version.__version__
 
 async def get_user_id(ids):

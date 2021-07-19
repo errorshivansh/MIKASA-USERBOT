@@ -10,7 +10,7 @@ from telethon.tl.functions.channels import InviteToChannelRequest, JoinChannelRe
 from MikasaBot import LOGS, bot, tbot
 from MikasaBot.config import Config
 from MikasaBot.utils import load_module
-from MikasaBot.version import __hell__ as mikasaver
+from MikasaBot.version import __mikasa__ as mikasaver
 hl = Config.HANDLER
 MIKASA_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
 
