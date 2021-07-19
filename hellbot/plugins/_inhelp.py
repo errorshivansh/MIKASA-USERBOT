@@ -151,14 +151,14 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 result = builder.document(
                     ALV_PIC,
                     text=he_ll,
-                    title="HellBot Alive",
+                    title="MikasaBot Alive",
                     buttons=alv_btn,
                     link_preview=False,
                 )
             else:
                 result = builder.article(
                     text=he_ll,
-                    title="HellBot Alive",
+                    title="MikasaBot Alive",
                     buttons=alv_btn,
                     link_preview=False,
                 )
@@ -184,7 +184,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 text=f"**⚡ ʟɛɢɛռɖǟʀʏ ǟʄ ʍɨӄǟֆǟ ⚡**",
                 buttons=[
                     [Button.url("📑 Repo 📑", "https://t.me/Mikasa_bot_support")],
-                    [Button.url("🚀 Deploy 🚀", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FThe-HellBot%2FHellBot&template=https%3A%2F%2Fgithub.com%2Fthe-MikasaBot%2FMikasaBot")],
+                    [Button.url("🚀 Deploy 🚀", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FThe-MikasaBot%2FMikasaBot&template=https%3A%2F%2Fgithub.com%2Fthe-MikasaBot%2FMikasaBot")],
                 ],
             )
 

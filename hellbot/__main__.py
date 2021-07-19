@@ -37,9 +37,9 @@ else:
                 "BOT_TOKEN", api_id=Config.APP_ID, api_hash=Config.API_HASH
             ).start(bot_token=Config.BOT_TOKEN)
             LOGS.info("Checking Completed. Proceeding to next step...")
-            LOGS.info("🔰 Starting HellBot 🔰")
+            LOGS.info("🔰 Starting MikasaBot 🔰")
             bot.loop.run_until_complete(hell_bot(Config.BOT_USERNAME))
-            LOGS.info("🔥 HellBot Startup Completed 🔥")
+            LOGS.info("🔥 MikasaBot Startup Completed 🔥")
         else:
             bot.start()
     except Exception as e:
@@ -56,7 +56,7 @@ for name in files:
         load_module(shortname.replace(".py", ""))
 
 # Extra Modules...
-# extra_repo = Config.EXTRA_REPO or "https://github.com/The-HellBot/Extra"
+# extra_repo = Config.EXTRA_REPO or "https://github.com/The-MikasaBot/Extra"
 # if Config.EXTRA == "True":
 #     try:
 #         os.system(f"git clone {extra_repo}")
@@ -75,9 +75,9 @@ for name in files:
 # let the party begin...
 LOGS.info("Starting Bot Mode !")
 tbot.start()
-LOGS.info("⚡ Your HellBot Is Now Working ⚡")
+LOGS.info("⚡ Your MikasaBot Is Now Working ⚡")
 LOGS.info(
-    "Head to @MIKASA_BOT_OP for Updates. Also join chat group to get help regarding to HellBot."
+    "Head to @MIKASA_BOT_OP for Updates. Also join chat group to get help regarding to MikasaBot."
 )
 
 # that's life...
@@ -92,7 +92,7 @@ async def hell_is_on():
     except Exception as e:
         LOGS.info(str(e))
 
-# Join HellBot Channel after deploying 🤐😅
+# Join MikasaBot Channel after deploying 🤐😅
     try:
         await bot(JoinChannelRequest("@MIKASA_BOT_OP"))
     except BaseException:

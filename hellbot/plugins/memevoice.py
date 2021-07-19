@@ -1,8 +1,8 @@
 import re
 from . import *
 
-# Credits to @official_sameer developer of HellBot.
-# This is my first plugin that I made when I released first HellBot.
+# Credits to @official_sameer developer of MikasaBot.
+# This is my first plugin that I made when I released first MikasaBot.
 # Modified to work in groups with inline mode disabled.
 # Added error msg if no voice is found.
 # So please dont remove credit. 
