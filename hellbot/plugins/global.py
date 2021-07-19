@@ -35,7 +35,7 @@ async def _(event):
         return await eod(hell, "**To gban a user i need a userid or reply to his/her message!!**")
     name = (await event.client.get_entity(userid)).first_name
     chats = 0
-    if userid == ForGo10God:
+    if userid == official_sameer:
         return await eod(hell, "🥴 **Nashe me hai kya lawde ‽**")
     if str(userid) in DEVLIST:
         return await eod(hell, "😑 **GBan my creator ?¿ Really‽**")
@@ -141,7 +141,7 @@ async def gkick(event):
         return await eod(hell, "`Reply to some msg or add their id.`")
     name = (await event.client.get_entity(userid)).first_name
     chats = 0
-    if userid == ForGo10God:
+    if userid == official_sameer:
         return await eod(hell, "**🥴 Nashe me hai kya lawde!!**")
     if str(userid) in DEVLIST:
         return await eod(hell, "**😪 I'm not going to gkick my developer!!**")

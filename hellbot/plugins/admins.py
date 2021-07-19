@@ -197,7 +197,7 @@ async def muth(hell):
             return await hell.edit(
                 "Nigga is already muted here 🥴"
             )
-        if hell.chat_id == ForGo10God:
+        if hell.chat_id == official_sameer:
             return await eod(hell, "Nashe me hai kya lawde 🥴")
         try:
             mute(hell.chat_id, hell.chat_id)
@@ -224,7 +224,7 @@ async def muth(hell):
                 name = (await hell.client.get_entity(userid)).first_name
         else:
             return await eod(hellevent, "I Need a user to mute!!", 5)
-        if userid == ForGo10God:
+        if userid == official_sameer:
             return await eod(hellevent, "Nashe me hai kya lawde", 5)
         if str(userid) in DEVLIST:
             return await eod(hellevent, "**Error Muting God**", 7)
