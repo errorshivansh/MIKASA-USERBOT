@@ -1,20 +1,20 @@
 import datetime
-from hellbot import *
-from hellbot.config import Config
-from hellbot.helpers import *
-from hellbot.utils import *
-from hellbot.random_strings import *
-from hellbot.version import __hell__
+from MikasaBot import *
+from MikasaBot.config import Config
+from MikasaBot.helpers import *
+from MikasaBot.utils import *
+from MikasaBot.random_strings import *
+from MikasaBot.version import __hell__
 from telethon import version
 
 
 HELL_USER = bot.me.first_name
 ForGo10God = bot.uid
 mikasa_mention = f"[{HELL_USER}](tg://user?id={ForGo10God})"
-mikasa_logo = "./hellbot/resources/pics/hellbot_logo.jpg"
-cjb = "./hellbot/resources/pics/cjb.jpg"
-restlo = "./hellbot/resources/pics/rest.jpeg"
-shuru = "./hellbot/resources/pics/shuru.jpg"
+mikasa_logo = "./MikasaBot/resources/pics/MikasaBot_logo.jpg"
+cjb = "./MikasaBot/resources/pics/cjb.jpg"
+restlo = "./MikasaBot/resources/pics/rest.jpeg"
+shuru = "./MikasaBot/resources/pics/shuru.jpg"
 hl = Config.HANDLER
 shl = Config.SUDO_HANDLER
 hell_ver = __hell__
@@ -48,7 +48,7 @@ if "@" in my_channel:
 if "@" in my_group:
     my_group = my_group.replace("@", "")
 
-chnl_link = "https://t.me/its_hellbot"
+chnl_link = "https://t.me/its_MikasaBot"
 hell_channel = f"[†hê Hêllẞø†]({chnl_link})"
 grp_link = "https://t.me/HellBot_Chat"
 hell_grp = f"[Hêllẞø† Group]({grp_link})"
@@ -70,4 +70,4 @@ WELCOME_FORMAT = """**Use these fomats in your welcome note to make them attract
 """
 # will add more soon
 
-# hellbot
+# MikasaBot

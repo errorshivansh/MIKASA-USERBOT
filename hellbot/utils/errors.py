@@ -16,9 +16,9 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from hellbot import *
-from hellbot.helpers import *
-from hellbot.config import Config
+from MikasaBot import *
+from MikasaBot.helpers import *
+from MikasaBot.config import Config
 
 
 # this shit handles errors
@@ -75,4 +75,4 @@ def errors_handler(func):
 
     return wrapper
 
-# hellbot
+# MikasaBot

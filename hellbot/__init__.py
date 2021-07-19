@@ -11,7 +11,7 @@ from requests import get
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 
-from hellbot.config import Config
+from MikasaBot.config import Config
 
 StartTime = datetime.datetime.now()
 
@@ -57,7 +57,7 @@ else:
     session_name = "startup"
     bot = TelegramClient(session_name, Config.APP_ID, Config.API_HASH)
 
-tbot = TelegramClient('hellbot', api_id=Config.APP_ID, api_hash=Config.API_HASH).start(bot_token=Config.BOT_TOKEN)
+tbot = TelegramClient('MikasaBot', api_id=Config.APP_ID, api_hash=Config.API_HASH).start(bot_token=Config.BOT_TOKEN)
 
 
 # global variables
@@ -76,4 +76,4 @@ AFKREASON = None
 SUDO_LIST = {}
 
 
-# hellbot
+# MikasaBot

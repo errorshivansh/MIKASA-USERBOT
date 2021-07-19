@@ -30,7 +30,7 @@ KANGING_STR = [
     "Turn around, Go straight and f*ck off...",
 ]
 
-hellbot = Config.STICKER_PACKNAME
+MikasaBot = Config.STICKER_PACKNAME
 
 
 @bot.on(hell_cmd(outgoing=True, pattern="kang"))
@@ -99,8 +99,8 @@ async def kang(args):
 
         packname = f"{user.username}_MikasaBot_{pack}"
         packnick = (
-            f"{hellbot} Vol.{pack}"
-            if hellbot
+            f"{MikasaBot} Vol.{pack}"
+            if MikasaBot
             else f"@{user.username}'s HellBot Vol.{pack}"
         )
         cmd = "/newpack"
@@ -135,8 +135,8 @@ async def kang(args):
                     pack += 1
                     packname = f"{user.username}_by_{user.username}_{pack}"
                     packnick = (
-                        f"{hellbot} Vol.{pack}"
-                        if hellbot
+                        f"{MikasaBot} Vol.{pack}"
+                        if MikasaBot
                         else f"@{user.username}'s HellBot Vol.{pack}"
                     )
                     await hell.edit(

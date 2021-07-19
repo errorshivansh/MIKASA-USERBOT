@@ -42,4 +42,4 @@ class Development(Config):
   SUDO_HANDLER = "!"
 
 # end of required config
-# hellbot
+# MikasaBot

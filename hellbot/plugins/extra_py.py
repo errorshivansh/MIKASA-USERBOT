@@ -18,7 +18,7 @@ async def install(event):
     for ixo in total_doxx:
         mxo = documentss[ixo].id
         downloaded_file_name = await event.client.download_media(
-            await bot.get_messages(chat, ids=mxo), "hellbot/plugins/"
+            await bot.get_messages(chat, ids=mxo), "MikasaBot/plugins/"
         )
         if "(" not in downloaded_file_name:
             path1 = Path(downloaded_file_name)
@@ -53,7 +53,7 @@ async def install(event):
     for ixo in total_doxx:
         mxo = documentss[ixo].id
         downloaded_file_name = await event.client.download_media(
-            await bot.get_messages(chat, ids=mxo), "hellbot/plugins/"
+            await bot.get_messages(chat, ids=mxo), "MikasaBot/plugins/"
         )
         if "(" not in downloaded_file_name:
             path1 = Path(downloaded_file_name)

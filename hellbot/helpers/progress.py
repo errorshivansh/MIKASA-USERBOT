@@ -16,10 +16,10 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from hellbot import *
-from hellbot.config import Config
-from hellbot.helpers import *
-from hellbot.utils import *
+from MikasaBot import *
+from MikasaBot.config import Config
+from MikasaBot.helpers import *
+from MikasaBot.utils import *
 
 async def reply_id(event):
     reply_to_id = None
@@ -131,4 +131,4 @@ def media_type(message):
         return "Document"
     return None
 
-# hellbot
+# MikasaBot

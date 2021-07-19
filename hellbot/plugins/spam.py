@@ -29,9 +29,9 @@ async def spammer(e):
 async def bigspam(hell):
     if not hell.text[0].isalpha() and hell.text[0] not in ("/", "#", "@", "!"):
         hell_msg = hell.text
-        hellbot_count = int(hell_msg[9:13])
+        MikasaBot_count = int(hell_msg[9:13])
         hell_spam = str(hell.text[13:])
-        for i in range(1, hellbot_count):
+        for i in range(1, MikasaBot_count):
             await hell.respond(hell_spam)
         await hell.delete()
         await hell.client.send_message(
@@ -89,7 +89,7 @@ CmdHelp("spam").add_command(
 ).add_command(
   "dspam", "<delay> <spam count> <text>", "Sends the text 'X' number of times in 'Y' seconds of delay", ".dspam 5 100 Hello"
 ).add_command(
-  "bigspam", "<count> <text>", "Sends the text 'X' number of times. This what hellbot iz known for. The Best BigSpam Ever", ".bigspam 5000 Hello"
+  "bigspam", "<count> <text>", "Sends the text 'X' number of times. This what MikasaBot iz known for. The Best BigSpam Ever", ".bigspam 5000 Hello"
 ).add_info(
   "Spammers Commands"
 ).add_warning(

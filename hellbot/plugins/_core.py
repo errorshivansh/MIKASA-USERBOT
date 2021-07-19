@@ -18,7 +18,7 @@ async def kk(event):
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
-    cmd = "ls hellbot/plugins"
+    cmd = "ls MikasaBot/plugins"
     thumb = mikasa_logo
     process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
@@ -52,7 +52,7 @@ async def send(event):
     thumb = mikasa_logo
     input_str = event.pattern_match.group(1)
     omk = f"**• Plugin name ≈** `{input_str}`\n**• Uploaded by ≈** {mikasa_mention}\n\n⚡ **[ʟɛɢɛռɖǟʀʏ ǟʄ ʍɨӄǟֆǟ]({chnl_link})** ⚡"
-    the_plugin_file = "./hellbot/plugins/{}.py".format(input_str)
+    the_plugin_file = "./MikasaBot/plugins/{}.py".format(input_str)
     if os.path.exists(the_plugin_file):
         lauda = await event.client.send_file(
             event.chat_id,
@@ -82,7 +82,7 @@ async def install(event):
         try:
             downloaded_file_name = await event.client.download_media(  # pylint:disable=E0602
                 await event.get_reply_message(),
-                "./hellbot/plugins/"  # pylint:disable=E0602
+                "./MikasaBot/plugins/"  # pylint:disable=E0602
             )
             if "(" not in downloaded_file_name:
                 path1 = Path(downloaded_file_name)
@@ -115,7 +115,7 @@ async def uninstall(kraken):
     if kraken.fwd_from:
         return
     shortname = kraken.pattern_match["shortname"]
-    dir_path =f"./hellbot/plugins/{shortname}.py"
+    dir_path =f"./MikasaBot/plugins/{shortname}.py"
     try:
         remove_plugin(shortname)
         os.remove(dir_path)
@@ -175,4 +175,4 @@ CmdHelp("core").add_command(
   "❌ Install External Plugin On Your Own Risk. We won't help if anything goes wrong after installing a plugin."
 ).add()
 
-# hellbot
+# MikasaBot
