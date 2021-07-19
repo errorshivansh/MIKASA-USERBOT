@@ -20,7 +20,7 @@ async def kraken(ded):
     name = ded.pattern_match.group(1)
     await edit_or_reply(
         ded,
-        f"{hell_mention} --- {name}          \n　　　　　|"
+        f"{mikasa_mention} --- {name}          \n　　　　　|"
         "\n　　　　　| \n"
         "　　　　　| \n"
         "　　　　　| \n"
@@ -60,7 +60,7 @@ async def kraken(think):
         return
     name = think.pattern_match.group(1)
     B = (
-        f"**{hell_mention} ~> {name} .\n\n**"
+        f"**{mikasa_mention} ~> {name} .\n\n**"
         "⠀⠀⠀⠀⢀⣀⣀⣀\n"
         "⠀⠀⠀⠰⡿⠿⠛⠛⠻⠿⣷\n"
         "⠀⠀⠀⠀⠀⠀⣀⣄⡀⠀⠀⠀⠀⢀⣀⣀⣤⣄⣀⡀\n"
@@ -87,7 +87,7 @@ async def kraken(frogsay):
         return
     name = frogsay.pattern_match.group(1)
     C = (
-        f"**{hell_mention} ~> {name} .\n\n**"
+        f"**{mikasa_mention} ~> {name} .\n\n**"
         "⠄⠄⠄⠄⠄⣀⣀⣤⣶⣿⣿⣶⣶⣶⣤⣄⣠⣴⣶⣿⣶⣦⣄⠄\n"
         "⠄⣠⣴⣾⣿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦\n"
         "⢠⠾⣋⣭⣄⡀⠄⠙⠻⣿⣿⡿⠛⠋⠉⠉⠉⠙⠛⠿⣿⣿⣿⣿\n"
@@ -114,7 +114,7 @@ async def kraken(deadfrog):
         return
     name = deadfrog.pattern_match.group(1)
     D = (
-        f"**{hell_mention} ~> {name} .\n\n**"
+        f"**{mikasa_mention} ~> {name} .\n\n**"
         "⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\n"
         "⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\n"
         "⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\n"

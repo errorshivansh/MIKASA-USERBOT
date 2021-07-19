@@ -152,7 +152,7 @@ async def upstream(event):
         await event.edit(
             "\n**😎 Hêllẞø† is UP-TO-DATE.**"
             f"\n\n**Version :**  {hell_ver}"
-            f"\n**Owner :**  {hell_mention}"
+            f"\n**Owner :**  {mikasa_mention}"
             f"\n**Git Branch :**  {UPSTREAM_REPO_BRANCH}\n"
         )
         return repo.__del__()
@@ -216,7 +216,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             )
             await asyncio.sleep(5)
             return await event.delete()
-        await event.edit(f"**Your Hêllẞø† Is UpToDate**\n\n**Version :**  __{hell_ver}__\n**Oɯɳҽɾ :**  {hell_mention}")
+        await event.edit(f"**Your Hêllẞø† Is UpToDate**\n\n**Version :**  __{hell_ver}__\n**Oɯɳҽɾ :**  {mikasa_mention}")
     else:
         await event.edit("**Please set up**  `HEROKU_API_KEY`  **from heroku to update!**")
     return

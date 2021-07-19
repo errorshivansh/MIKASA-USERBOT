@@ -59,7 +59,7 @@ async def lg1(hellevent):
     await bot.send_file(
         hellevent.chat_id,
         file_name,
-        caption=f"**Made By :** {hell_mention}",
+        caption=f"**Made By :** {mikasa_mention}",
     )
     await event.delete()
     try:

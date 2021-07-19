@@ -213,7 +213,7 @@ async def dyno_usage(hell):
         " ➠ __Dyno hours remaining this month__ :\n"
         f"     ★  `{hours}`**h**  `{minutes}`**m**  "
         f"**|**  `{percentage}`**%**"
-        f"\n\n**Owner :** {hell_mention}"
+        f"\n\n**Owner :** {mikasa_mention}"
     )
 
 
@@ -229,7 +229,7 @@ async def _(dyno):
         return await dyno.reply(f"Make Sure Your Heroku AppName & API Key are filled correct. Visit {hell_grp} for help.", link_preview=False)
    # event = await eor(dyno, "Downloading Logs...")
     hell_data = app.get_log()
-    await eor(dyno, hell_data, deflink=True, linktext=f"**🗒️ Heroku Logs of 💯 lines. 🗒️**\n\n🌟 **Bot Of :**  {hell_mention}\n\n🚀** Pasted**  ")
+    await eor(dyno, hell_data, deflink=True, linktext=f"**🗒️ Heroku Logs of 💯 lines. 🗒️**\n\n🌟 **Bot Of :**  {mikasa_mention}\n\n🚀** Pasted**  ")
     
 
 def prettyjson(obj, indent=2, maxlinelength=80):
