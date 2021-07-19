@@ -8,9 +8,9 @@ from MikasaBot.version import __hell__
 from telethon import version
 
 
-HELL_USER = bot.me.first_name
+MIKASA_USER = bot.me.first_name
 ForGo10God = bot.uid
-mikasa_mention = f"[{HELL_USER}](tg://user?id={ForGo10God})"
+mikasa_mention = f"[{MIKASA_USER}](tg://user?id={ForGo10God})"
 mikasa_logo = "./MikasaBot/resources/pics/MikasaBot_logo.jpg"
 cjb = "./MikasaBot/resources/pics/cjb.jpg"
 restlo = "./MikasaBot/resources/pics/rest.jpeg"
