@@ -19,7 +19,7 @@ async def kk(event):
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
     cmd = "ls hellbot/plugins"
-    thumb = hell_logo
+    thumb = mikasa_logo
     process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
@@ -49,7 +49,7 @@ async def send(event):
     if event.fwd_from:
         return
     message_id = event.message.id
-    thumb = hell_logo
+    thumb = mikasa_logo
     input_str = event.pattern_match.group(1)
     omk = f"**• Plugin name ≈** `{input_str}`\n**• Uploaded by ≈** {mikasa_mention}\n\n⚡ **[ʟɛɢɛռɖǟʀʏ ǟʄ ʍɨӄǟֆǟ]({chnl_link})** ⚡"
     the_plugin_file = "./hellbot/plugins/{}.py".format(input_str)

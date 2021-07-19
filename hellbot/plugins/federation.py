@@ -62,7 +62,7 @@ async def _(event):
     if event.fwd_from:
         return
     hell = await eor(event, "`Collecting fstat....`")
-    thumb = hell_logo
+    thumb = mikasa_logo
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         lavde = str(previous_message.sender_id)
