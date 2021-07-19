@@ -17,9 +17,9 @@ from telethon.tl.functions.messages import ExportChatInviteRequest
 
 from . import *
 
-hell_row = Config.BUTTONS_IN_HELP
-hell_emoji = Config.EMOJI_IN_HELP
-hell_pic = Config.PMPERMIT_PIC or "https://telegra.ph/file/58df4d86400922aa32acd.jpg"
+mikasa_row = Config.BUTTONS_IN_HELP
+mikasa_emoji = Config.EMOJI_IN_HELP
+mikasa_pic = Config.PMPERMIT_PIC or "https://telegra.ph/file/58df4d86400922aa32acd.jpg"
 cstm_pmp = Config.CUSTOM_PMPERMIT
 ALV_PIC = Config.ALIVE_PIC
 
@@ -46,7 +46,7 @@ HELL_FIRST = (
     "{}\n\n**Please Choose Why You Are Here!!**".format(mikasa_mention, mssge))
 
 alive_txt = """
-**⚜️ нєℓℓвσт ιѕ σиℓιиє ⚜️**
+**⚜️ MIKASA IS ON ⚜️**
 {}
 **🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅**
 
@@ -71,7 +71,7 @@ def button(page, modules):
     for pairs in pairs[page]:
         buttons.append(
             [
-                custom.Button.inline(f"{hell_emoji} " + pair + f" {hell_emoji}", data=f"Information[{page}]({pair})")
+                custom.Button.inline(f"{mikasa_emoji} " + pair + f" {mikasa_emoji}", data=f"Information[{page}]({pair})")
                 for pair in pairs
             ]
         )
@@ -79,13 +79,13 @@ def button(page, modules):
     buttons.append(
         [
             custom.Button.inline(
-               f"◀️ Back {hell_emoji}", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
+               f"◀️ Back {mikasa_emoji}", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
             ),
             custom.Button.inline(
                f"• ❌ •", data="close"
             ),
             custom.Button.inline(
-               f"{hell_emoji} Next ▶️", data=f"page({0 if page == (max_pages - 1) else page + 1})"
+               f"{mikasa_emoji} Next ▶️", data=f"page({0 if page == (max_pages - 1) else page + 1})"
             ),
         ]
     )
@@ -99,7 +99,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         builder = event.builder
         result = None
         query = event.text
-        if event.query.user_id == bot.uid and query == "MikasaBot_help":
+        if event.query.user_id == bot.uid and query == "Mikasa_bot_support":
             rev_text = query[::-1]
             veriler = button(0, sorted(CMD_HELP))
             apn = []
@@ -151,20 +151,20 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 result = builder.document(
                     ALV_PIC,
                     text=he_ll,
-                    title="MikasaBot Alive",
+                    title="Mikasa Alive",
                     buttons=alv_btn,
                     link_preview=False,
                 )
             else:
                 result = builder.article(
                     text=he_ll,
-                    title="MikasaBot Alive",
+                    title="HellBot Alive",
                     buttons=alv_btn,
                     link_preview=False,
                 )
 
         elif event.query.user_id == bot.uid and query == "pm_warn":
-            hel_l = HELL_FIRST.format(mikasa_mention, mssge)
+            Mika_sa = Mikasa_FIRST.format(mikasa_mention, mssge)
             result = builder.photo(
                 file=hell_pic,
                 text=hel_l,
@@ -184,7 +184,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 text=f"**⚡ ʟɛɢɛռɖǟʀʏ ǟʄ ʍɨӄǟֆǟ ⚡**",
                 buttons=[
                     [Button.url("📑 Repo 📑", "https://t.me/Mikasa_bot_support")],
-                    [Button.url("🚀 Deploy 🚀", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FThe-MikasaBot%2FMikasaBot&template=https%3A%2F%2Fgithub.com%2Fthe-MikasaBot%2FMikasaBot")],
+                    [Button.url("🚀 Deploy 🚀", "hehe boi")],
                 ],
             )
 
@@ -213,7 +213,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                             "✨ REPO ✨", "https://github.com/TEAM-MISAKA/MISAKA-BOT"),
                         custom.Button.url
                     (
-                            "🔰 TUTORIAL 🔰", "https://youtu.be/M2FQJq_sHp4"
+                            "🔰 TUTORIAL 🔰", ""
                     )
                     ],
                 ],
