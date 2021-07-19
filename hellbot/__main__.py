@@ -12,7 +12,7 @@ from MikasaBot.config import Config
 from MikasaBot.utils import load_module
 from MikasaBot.version import __hell__ as mikasaver
 hl = Config.HANDLER
-HELL_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
+MIKASA_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
 
 # let's get the bot ready
 async def hell_bot(bot_token):
@@ -86,7 +86,7 @@ async def hell_is_on():
         if Config.LOGGER_ID != 0:
             await bot.send_file(
                 Config.LOGGER_ID,
-                HELL_PIC,
+                MIKASA_PIC,
                 caption=f"#START \n\nDeployed ʍɨӄǟֆǟ ẞø† Successfully\n\n**ʍɨӄǟֆǟ ẞø† - {mikasaver}**\n\nType `{hl}ping` or `{hl}alive` to check! \n\nJoin [ʍɨӄǟֆǟ ẞø† Channel](t.me/MIKASA_BOT_OP) for Updates & [ʍɨӄǟֆǟ ẞø† Chat](t.me/MikasaBot_chat) for any query regarding ʍɨӄǟֆǟ ẞø†",
             )
     except Exception as e:
