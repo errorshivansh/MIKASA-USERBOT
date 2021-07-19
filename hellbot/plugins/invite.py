@@ -65,7 +65,7 @@ async def get_users(event):
     he_ll = event.pattern_match.group(1)
     if he_ll == "@HellBot_Chat":
         return await hell.edit("Restricted to invite users from there.")
-    elif he_ll == "@MikasaBot_chat":
+    elif he_ll == "@Mikasa_bot_support":
         return await hell.edit("Restricted to invite users from there.")
     elif he_ll == "@HELLBOT_CHAT":
         return await hell.edit("Restricted to invite users from there.")

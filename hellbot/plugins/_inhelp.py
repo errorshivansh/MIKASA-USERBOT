@@ -183,7 +183,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 title="Repository",
                 text=f"**⚡ ʟɛɢɛռɖǟʀʏ ǟʄ ʍɨӄǟֆǟ ⚡**",
                 buttons=[
-                    [Button.url("📑 Repo 📑", "https://t.me/MikasaBot_chat")],
+                    [Button.url("📑 Repo 📑", "https://t.me/Mikasa_bot_support")],
                     [Button.url("🚀 Deploy 🚀", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FThe-HellBot%2FHellBot&template=https%3A%2F%2Fgithub.com%2Fthe-MikasaBot%2FMikasaBot")],
                 ],
             )
@@ -205,7 +205,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                     [
                         custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/MIKASA_BOT_OP"),
                         custom.Button.url(
-                            "⚡ GROUP ⚡", "https://t.me/MikasaBot_chat"
+                            "⚡ GROUP ⚡", "https://t.me/Mikasa_bot_support"
                         ),
                     ],
                     [
