@@ -48,7 +48,7 @@ if "@" in my_channel:
 if "@" in my_group:
     my_group = my_group.replace("@", "")
 
-chnl_link = "https://t.me/its_MikasaBot"
+chnl_link = "https://t.me/MIKASA_BOT_OP"
 hell_channel = f"[†hê ʍɨӄǟֆǟ ẞø†]({chnl_link})"
 grp_link = "https://t.me/Mikasa_bot_support"
 hell_grp = f"[ʍɨӄǟֆǟ ẞø† Group]({grp_link})"
