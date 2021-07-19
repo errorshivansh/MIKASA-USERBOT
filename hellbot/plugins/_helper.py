@@ -9,7 +9,7 @@ from . import *
 msg = f"""
 **⚡ ʟɛɢɛռɖǟʀʏ ǟʄ ʍɨӄǟֆǟ ⚡**
 
-  •        [📑 Repo 📑](https://github.com/The-HellBot/HellBot)
+  •        [📑 Repo 📑](https://github.com/TEAM-MISAKA/MISAKA-BOT)
   •        [🚀 Deploy 🚀](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FThe-HellBot%2FHellBot&template=https%3A%2F%2Fgithub.com%2Fthe-hellbot%2Fhellbot)
 
   •  ©️ {hell_channel} ™
