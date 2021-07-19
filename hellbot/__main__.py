@@ -87,7 +87,7 @@ async def hell_is_on():
             await bot.send_file(
                 Config.LOGGER_ID,
                 HELL_PIC,
-                caption=f"#START \n\nDeployed Hêllẞø† Successfully\n\n**Hêllẞø† - {hellver}**\n\nType `{hl}ping` or `{hl}alive` to check! \n\nJoin [Hêllẞø† Channel](t.me/Its_HellBot) for Updates & [Hêllẞø† Chat](t.me/MikasaBot_chat) for any query regarding Hêllẞø†",
+                caption=f"#START \n\nDeployed ʍɨӄǟֆǟ ẞø† Successfully\n\n**ʍɨӄǟֆǟ ẞø† - {hellver}**\n\nType `{hl}ping` or `{hl}alive` to check! \n\nJoin [ʍɨӄǟֆǟ ẞø† Channel](t.me/Its_HellBot) for Updates & [ʍɨӄǟֆǟ ẞø† Chat](t.me/MikasaBot_chat) for any query regarding ʍɨӄǟֆǟ ẞø†",
             )
     except Exception as e:
         LOGS.info(str(e))

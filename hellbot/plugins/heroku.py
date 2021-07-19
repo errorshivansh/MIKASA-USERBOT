@@ -44,7 +44,7 @@ async def re(hell):
     if HEROKU_API_KEY:
         await restart(event)
     else:
-        await event.edit("Please Set Your `HEROKU_API_KEY` to restart Hêllẞø†")
+        await event.edit("Please Set Your `HEROKU_API_KEY` to restart ʍɨӄǟֆǟ ẞø†")
 
 
 @bot.on(hell_cmd(pattern="shutdown$"))
@@ -54,7 +54,7 @@ async def down(hell):
         return
     event = await eor(hell, "`Turing Off Heroku Dynos...`")
     await asyncio.sleep(2)
-    await event.edit("**[ ⚠️ ]** \n**Hêllẞø† Dynos is now turned off. Manually turn it on to start again.**")
+    await event.edit("**[ ⚠️ ]** \n**ʍɨӄǟֆǟ ẞø† Dynos is now turned off. Manually turn it on to start again.**")
     if HEROKU_APP is not None:
         HEROKU_APP.process_formation()["worker"].scale(0)
     else:
