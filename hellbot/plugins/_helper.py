@@ -12,23 +12,23 @@ msg = f"""
   •        [📑 Repo 📑](https://github.com/TEAM-MISAKA/MISAKA-BOT)
   •        [🚀 Deploy 🚀](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FThe-MikasaBot%2FMikasaBot&template=https%3A%2F%2Fgithub.com%2Fthe-MikasaBot%2FMikasaBot)
 
-  •  ©️ {hell_channel} ™
+  •  ©️ {mikasa_channel} ™
 """
 botname = Config.BOT_USERNAME
 
-@bot.on(hell_cmd(pattern="repo$"))
+@bot.on(mikasa_cmd(pattern="repo$"))
 @bot.on(sudo_cmd(pattern="repo$", allow_sudo=True))
 async def repo(event):
     try:
-        hell = await bot.inline_query(botname, "repo")
-        await hell[0].click(event.chat_id)
+        mikasa = await bot.inline_query(botname, "repo")
+        await mikasa[0].click(event.chat_id)
         if event.sender_id == official_sameer:
             await event.delete()
     except (noin, dedbot):
         await eor(event, msg)
 
 
-@bot.on(hell_cmd(pattern="help ?(.*)", outgoing=True))
+@bot.on(mikasa_cmd(pattern="help ?(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="help ?(.*)", allow_sudo=True))
 async def yardim(event):
     if event.fwd_from:
@@ -51,7 +51,7 @@ async def yardim(event):
         await eor(event, "**⚠️ ERROR !!** \nPlease Re-Check BOT_TOKEN & BOT_USERNAME on Heroku.")
 
 
-@bot.on(hell_cmd(pattern="plinfo(?: |$)(.*)", outgoing=True))
+@bot.on(mikasa_cmd(pattern="plinfo(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="plinfo(?: |$)(.*)", allow_sudo=True))
 async def MikasaBott(event):
     if event.fwd_from:

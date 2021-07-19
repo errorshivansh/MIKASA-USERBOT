@@ -3,13 +3,13 @@ import datetime
 
 from . import *
 
-@bot.on(hell_cmd(pattern="ping$"))
+@bot.on(mikasa_cmd(pattern="ping$"))
 @bot.on(sudo_cmd(pattern="ping$", allow_sudo=True))
-async def pong(hell):
-    if hell.fwd_from:
+async def pong(mikasa):
+    if mikasa.fwd_from:
         return
     start = datetime.datetime.now()
-    event = await eor(hell, "`·.·★ ℘ıŋɠ ★·.·´")
+    event = await eor(mikasa, "`·.·★ ℘ıŋɠ ★·.·´")
     end = datetime.datetime.now()
     ms = (end - start).microseconds / 1000
     await event.edit(

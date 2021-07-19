@@ -4,7 +4,7 @@ from telethon.tl.types import ChatBannedRights
 from . import *
 
 
-@bot.on(hell_cmd(pattern=r"lock ?(.*)", outgoing=True))
+@bot.on(mikasa_cmd(pattern=r"lock ?(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern=r"lock ?(.*)", allow_sudo=True))
 @errors_handler
 async def locks(event):
@@ -98,7 +98,7 @@ async def locks(event):
         return
 
 
-@bot.on(hell_cmd(pattern="unlock ?(.*)", outgoing=True))
+@bot.on(mikasa_cmd(pattern="unlock ?(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="unlock ?(.*)", allow_sudo=True))
 @errors_handler
 async def rem_locks(event):
@@ -196,7 +196,7 @@ async def rem_locks(event):
         await eod(event, f"`Do I have proper rights for that ??`\n**Error:** {str(e)}")
         return
 
-@bot.on(hell_cmd(pattern="ltype$"))
+@bot.on(mikasa_cmd(pattern="ltype$"))
 @bot.on(sudo_cmd(pattern="ltype$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

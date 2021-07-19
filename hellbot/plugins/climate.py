@@ -29,7 +29,7 @@ async def get_tz(con):
         return
 
 
-@bot.on(hell_cmd(pattern="climate ?(.*)"))
+@bot.on(mikasa_cmd(pattern="climate ?(.*)"))
 @bot.on(sudo_cmd(pattern="climate ?(.*)", allow_sudo=True))
 async def get_weather(weather):
     if not OWM_API:
@@ -130,7 +130,7 @@ async def get_weather(weather):
     )
 
 
-@bot.on(hell_cmd(outgoing=True, pattern="setcity(?: |$)(.*)"))
+@bot.on(mikasa_cmd(outgoing=True, pattern="setcity(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="setcity(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def set_default_city(city):
@@ -180,7 +180,7 @@ async def set_default_city(city):
     await edit_or_reply(city, f"`Set default city as {cityname}, {fullc_n}.`")
 
 
-@bot.on(hell_cmd(pattern="wttr ?(.*)"))
+@bot.on(mikasa_cmd(pattern="wttr ?(.*)"))
 @bot.on(sudo_cmd(pattern="wttr ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

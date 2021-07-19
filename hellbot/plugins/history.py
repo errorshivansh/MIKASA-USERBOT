@@ -3,22 +3,22 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from . import *
 
-@bot.on(hell_cmd(pattern="history ?(.*)"))
+@bot.on(mikasa_cmd(pattern="history ?(.*)"))
 @bot.on(sudo_cmd(pattern="history ?(.*)", allow_sudo=True))
-async def _(hellevent):
-    if hellevent.fwd_from:
+async def _(mikasaevent):
+    if mikasaevent.fwd_from:
         return 
-    if not hellevent.reply_to_msg_id:
-       await eod(hellevent, "`Please Reply To A User To Get This Module Work`")
+    if not mikasaevent.reply_to_msg_id:
+       await eod(mikasaevent, "`Please Reply To A User To Get This Module Work`")
        return
-    reply_message = await hellevent.get_reply_message() 
+    reply_message = await mikasaevent.get_reply_message() 
     chat = "Sangmatainfo_bot"
     victim = reply_message.sender.id
     if reply_message.sender.bot:
-       await eod(hellevent, "Need actual users. Not Bots")
+       await eod(mikasaevent, "Need actual users. Not Bots")
        return
-    await eor(hellevent, "Checking...")
-    async with hellevent.client.conversation(chat) as conv:
+    await eor(mikasaevent, "Checking...")
+    async with mikasaevent.client.conversation(chat) as conv:
           try:     
               response1 = conv.wait_event(events.NewMessage(incoming=True,from_users=461843263))
               response2 = conv.wait_event(events.NewMessage(incoming=True,from_users=461843263))
@@ -28,31 +28,31 @@ async def _(hellevent):
               response2 = await response2 
               response3 = await response3 
           except YouBlockedUserError: 
-              await eod(hellevent, "Please unblock @Sangmatainfo_bot")
+              await eod(mikasaevent, "Please unblock @Sangmatainfo_bot")
               return
           if response1.text.startswith("No records found"):
-             await eor(hellevent, "User never changed his Username...")
+             await eor(mikasaevent, "User never changed his Username...")
           else: 
-             await hellevent.delete()
-             await hellevent.client.send_message(hellevent.chat_id, response2.message)
+             await mikasaevent.delete()
+             await mikasaevent.client.send_message(mikasaevent.chat_id, response2.message)
 
 
-@bot.on(hell_cmd(pattern="unh ?(.*)"))
+@bot.on(mikasa_cmd(pattern="unh ?(.*)"))
 @bot.on(sudo_cmd(pattern="unh ?(.*)", allow_sudo=True))
-async def _(hellevent):
-    if hellevent.fwd_from:
+async def _(mikasaevent):
+    if mikasaevent.fwd_from:
         return 
-    if not hellevent.reply_to_msg_id:
-       await eod(hellevent, "`Please Reply To A User To Get This Module Work`")
+    if not mikasaevent.reply_to_msg_id:
+       await eod(mikasaevent, "`Please Reply To A User To Get This Module Work`")
        return
-    reply_message = await hellevent.get_reply_message() 
+    reply_message = await mikasaevent.get_reply_message() 
     chat = "Sangmatainfo_bot"
     victim = reply_message.sender.id
     if reply_message.sender.bot:
-       await eod(hellevent, "Need actual users. Not Bots")
+       await eod(mikasaevent, "Need actual users. Not Bots")
        return
-    await eor(hellevent, "Checking...")
-    async with hellevent.client.conversation(chat) as conv:
+    await eor(mikasaevent, "Checking...")
+    async with mikasaevent.client.conversation(chat) as conv:
           try:     
               response1 = conv.wait_event(events.NewMessage(incoming=True,from_users=461843263))
               response2 = conv.wait_event(events.NewMessage(incoming=True,from_users=461843263))
@@ -62,13 +62,13 @@ async def _(hellevent):
               response2 = await response2 
               response3 = await response3 
           except YouBlockedUserError: 
-              await eod(hellevent, "Please unblock @Sangmatainfo_bot")
+              await eod(mikasaevent, "Please unblock @Sangmatainfo_bot")
               return
           if response1.text.startswith("No records found"):
-             await eor(hellevent, "User never changed his Username...")
+             await eor(mikasaevent, "User never changed his Username...")
           else: 
-             await hellevent.delete()
-             await hellevent.client.send_message(hellevent.chat_id, response3.message)
+             await mikasaevent.delete()
+             await mikasaevent.client.send_message(mikasaevent.chat_id, response3.message)
 
 
 CmdHelp("history").add_command(

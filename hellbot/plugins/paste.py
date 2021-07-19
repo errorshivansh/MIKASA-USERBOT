@@ -24,7 +24,7 @@ def progress(current, total):
 
 DOGBIN_URL = "https://del.dog/"
 
-@bot.on(hell_cmd(pattern="paste ?(.*)", outgoing=True))
+@bot.on(mikasa_cmd(pattern="paste ?(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="paste ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -74,12 +74,12 @@ async def _(event):
         await eod(evnt, f"**ERROR !!**\n\n`{str(e)}`")
 
 
-@bot.on(hell_cmd(pattern="getpaste(?: |$)(.*)", outgoing=True))
+@bot.on(mikasa_cmd(pattern="getpaste(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="getpaste(?: |$)(.*)", allow_sudo=True))
 async def get_dogbin_content(dog_url):
     textx = await dog_url.get_reply_message()
     message = dog_url.pattern_match.group(1)
-    hell = await eor(dog_url, "`Getting dogbin content...`")
+    mikasa = await eor(dog_url, "`Getting dogbin content...`")
 
     if textx:
         message = str(textx.message)
@@ -94,7 +94,7 @@ async def get_dogbin_content(dog_url):
     elif message.startswith("del.dog/"):
         message = message[len("del.dog/") :]
     else:
-        await eod(hell, "`Is that even a dogbin url?`")
+        await eod(mikasa, "`Is that even a dogbin url?`")
         return
 
     resp = get(f"{DOGBIN_URL}raw/{message}")
@@ -102,14 +102,14 @@ async def get_dogbin_content(dog_url):
     try:
         resp.raise_for_status()
     except exceptions.HTTPError as HTTPErr:
-        await eod(hell, "Request returned an unsuccessful status code.\n\n" + str(HTTPErr)
+        await eod(mikasa, "Request returned an unsuccessful status code.\n\n" + str(HTTPErr)
         )
         return
     except exceptions.Timeout as TimeoutErr:
-        await eod(hell, "Request timed out." + str(TimeoutErr))
+        await eod(mikasa, "Request timed out." + str(TimeoutErr))
         return
     except exceptions.TooManyRedirects as RedirectsErr:
-        await eod(hell, "Request exceeded the configured number of maximum redirections."
+        await eod(mikasa, "Request exceeded the configured number of maximum redirections."
             + str(RedirectsErr)
         )
         return
@@ -118,7 +118,7 @@ async def get_dogbin_content(dog_url):
 
     await eor(dog_url, reply_text)
 
-@bot.on(hell_cmd(pattern="neko ?(.*)", outgoing=True))
+@bot.on(mikasa_cmd(pattern="neko ?(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="neko ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

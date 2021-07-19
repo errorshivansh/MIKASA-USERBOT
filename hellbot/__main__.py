@@ -15,7 +15,7 @@ hl = Config.HANDLER
 MIKASA_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
 
 # let's get the bot ready
-async def hell_bot(bot_token):
+async def mikasa_bot(bot_token):
     try:
         await bot.start(bot_token)
         bot.me = await bot.get_me()
@@ -38,7 +38,7 @@ else:
             ).start(bot_token=Config.BOT_TOKEN)
             LOGS.info("Checking Completed. Proceeding to next step...")
             LOGS.info("🔰 Starting MikasaBot 🔰")
-            bot.loop.run_until_complete(hell_bot(Config.BOT_USERNAME))
+            bot.loop.run_until_complete(mikasa_bot(Config.BOT_USERNAME))
             LOGS.info("🔥 MikasaBot Startup Completed 🔥")
         else:
             bot.start()
@@ -81,7 +81,7 @@ LOGS.info(
 )
 
 # that's life...
-async def hell_is_on():
+async def mikasa_is_on():
     try:
         if Config.LOGGER_ID != 0:
             await bot.send_file(
@@ -105,7 +105,7 @@ async def hell_is_on():
 #        pass
 
 
-bot.loop.create_task(hell_is_on())
+bot.loop.create_task(mikasa_is_on())
 
 if len(sys.argv) not in (1, 3, 4):
     bot.disconnect()

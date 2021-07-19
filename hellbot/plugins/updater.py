@@ -74,7 +74,7 @@ async def print_changelogs(event, ac_br, changelog):
 async def update_requirements():
     reqs = str(requirements_path)
     try:
-        process = await asyncio.create_subprocess_shell(
+        process = await asyncio.create_subprocess_smikasa(
             " ".join([sys.executable, "-m", "pip", "install", "-r", reqs]),
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
@@ -99,7 +99,7 @@ async def update(event, repo, ups_rem, ac_br):
     return
 
 
-@bot.on(hell_cmd(outgoing=True, pattern=r"update(| now)$"))
+@bot.on(mikasa_cmd(outgoing=True, pattern=r"update(| now)$"))
 @bot.on(sudo_cmd(pattern="update(| now)$", allow_sudo=True))
 async def upstream(event):
     conf = event.pattern_match.group(1).strip()
@@ -151,7 +151,7 @@ async def upstream(event):
     if changelog == "" and not force_update:
         await event.edit(
             "\n**😎 ʍɨӄǟֆǟ ẞø† is UP-TO-DATE.**"
-            f"\n\n**Version :**  {hell_ver}"
+            f"\n\n**Version :**  {mikasa_ver}"
             f"\n**Owner :**  {mikasa_mention}"
             f"\n**Git Branch :**  {UPSTREAM_REPO_BRANCH}\n"
         )
@@ -216,21 +216,21 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             )
             await asyncio.sleep(5)
             return await event.delete()
-        await event.edit(f"**Your ʍɨӄǟֆǟ ẞø† Is UpToDate**\n\n**Version :**  __{hell_ver}__\n**Oɯɳҽɾ :**  {mikasa_mention}")
+        await event.edit(f"**Your ʍɨӄǟֆǟ ẞø† Is UpToDate**\n\n**Version :**  __{mikasa_ver}__\n**Oɯɳҽɾ :**  {mikasa_mention}")
     else:
         await event.edit("**Please set up**  `HEROKU_API_KEY`  **from heroku to update!**")
     return
 
 
-@bot.on(hell_cmd(outgoing=True, pattern=r"update build$"))
+@bot.on(mikasa_cmd(outgoing=True, pattern=r"update build$"))
 @bot.on(sudo_cmd(pattern="update build$", allow_sudo=True))
 async def upstream(event):
     event = await edit_or_reply(event, "`Hard-Update In Progress... \nPlease wait until docker build is finished...`")
     off_repo = "https://github.com/TEAM-MISAKA/MISAKA-BOT"
     os.chdir("/app")
-    git_hell = f"rm -rf .git"
+    git_mikasa = f"rm -rf .git"
     try:
-        await runner.runcmd(git_hell)
+        await runner.runcmd(git_mikasa)
     except BaseException:
         pass
     try:

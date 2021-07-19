@@ -12,16 +12,16 @@ global groupsid
 groupsid = []
 
 
-async def all_groups_id(hell):
-    hellgroups = []
-    async for dialog in hell.client.iter_dialogs():
+async def all_groups_id(mikasa):
+    mikasagroups = []
+    async for dialog in mikasa.client.iter_dialogs():
         entity = dialog.entity
         if isinstance(entity, Channel) and entity.megagroup:
-            hellgroups.append(entity.id)
-    return hellgroups
+            mikasagroups.append(entity.id)
+    return mikasagroups
 
 
-@bot.on(hell_cmd(pattern="frwd$"))
+@bot.on(mikasa_cmd(pattern="frwd$"))
 @bot.on(sudo_cmd(pattern="frwd$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -45,7 +45,7 @@ async def _(event):
         await event.delete()
 
 
-@bot.on(hell_cmd(pattern="resend$"))
+@bot.on(mikasa_cmd(pattern="resend$"))
 @bot.on(sudo_cmd(pattern="resend$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -60,7 +60,7 @@ async def _(event):
     await event.respond(m)
 
 
-@bot.on(hell_cmd(pattern=r"fpost (.*)"))
+@bot.on(mikasa_cmd(pattern=r"fpost (.*)"))
 @bot.on(sudo_cmd(pattern=r"fpost (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

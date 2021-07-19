@@ -58,7 +58,7 @@ alive_txt = """
 """
 
 def button(page, modules):
-    Row = hell_row
+    Row = mikasa_row
     Column = 3
 
     modules = sorted([modul for modul in modules if not modul.startswith("_")])
@@ -114,9 +114,9 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         elif event.query.user_id == bot.uid and query.startswith("fsub"):
             hunter = event.pattern_match.group(1)
-            hell = hunter.split("+")
-            user = await bot.get_entity(int(hell[0]))
-            channel = await bot.get_entity(int(hell[1]))
+            mikasa = hunter.split("+")
+            user = await bot.get_entity(int(mikasa[0]))
+            channel = await bot.get_entity(int(mikasa[1]))
             msg = f"**👋 Welcome** [{user.first_name}](tg://user?id={user.id}), \n\n**📍 You need to Join** {channel.title} **to chat in this group.**"
             if not channel.username:
                 link = (await bot(ExportChatInviteRequest(channel))).link
@@ -134,7 +134,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             ]
 
         elif event.query.user_id == bot.uid and query == "alive":
-            he_ll = alive_txt.format(Config.ALIVE_MSG, tel_ver, hell_ver, uptime, abuse_m, is_sudo)
+            he_ll = alive_txt.format(Config.ALIVE_MSG, tel_ver, mikasa_ver, uptime, abuse_m, is_sudo)
             alv_btn = [
                 [Button.url(f"{MIKASA_USER}", f"tg://openmessage?user_id={official_sameer}")],
                 [Button.url("My Channel", f"https://t.me/{my_channel}"), 
@@ -166,7 +166,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         elif event.query.user_id == bot.uid and query == "pm_warn":
             Mika_sa = Mikasa_FIRST.format(mikasa_mention, mssge)
             result = builder.photo(
-                file=hell_pic,
+                file=mikasa_pic,
                 text=hel_l,
                 buttons=[
                     [
@@ -294,17 +294,17 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"unmute")))
     async def on_pm_click(event):
         hunter = (event.data_match.group(1)).decode("UTF-8")
-        hell = hunter.split("+")
-        if not event.sender_id == int(hell[0]):
+        mikasa = hunter.split("+")
+        if not event.sender_id == int(mikasa[0]):
             return await event.answer("This Ain't For You!!", alert=True)
         try:
-            await bot(GetParticipantRequest(int(hell[1]), int(hell[0])))
+            await bot(GetParticipantRequest(int(mikasa[1]), int(mikasa[0])))
         except UserNotParticipantError:
             return await event.answer(
                 "You need to join the channel first.", alert=True
             )
         await bot.edit_permissions(
-            event.chat_id, int(hell[0]), send_message=True, until_date=None
+            event.chat_id, int(mikasa[0]), send_message=True, until_date=None
         )
         await event.edit("Yay! You can chat now !!")
 
@@ -332,7 +332,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"close")))
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid or event.query.user_id in Config.SUDO_USERS:
-            veriler = custom.Button.inline(f"{hell_emoji} Re-Open Menu {hell_emoji}", data="reopen")
+            veriler = custom.Button.inline(f"{mikasa_emoji} Re-Open Menu {mikasa_emoji}", data="reopen")
             await event.edit(f"**⚜️ ʍɨӄǟֆǟ ẞø† Mêñû Prõvîdêr ìs ñôw Çlösëd ⚜️**\n\n**Bot Of :**  {mikasa_mention}\n\n        [©️ ʍɨӄǟֆǟ ẞø† ™️]({chnl_link})", buttons=veriler, link_preview=False)
         else:
             reply_pop_up_alert = "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © ʍɨӄǟֆǟ ẞø† ™"
@@ -380,7 +380,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
 
         buttons = [buttons[i : i + 2] for i in range(0, len(buttons), 2)]
-        buttons.append([custom.Button.inline(f"{hell_emoji} Main Menu {hell_emoji}", data=f"page({page})")])
+        buttons.append([custom.Button.inline(f"{mikasa_emoji} Main Menu {mikasa_emoji}", data=f"page({page})")])
         if event.query.user_id == bot.uid or event.query.user_id in Config.SUDO_USERS:
             await event.edit(
                 f"**📗 File :**  `{commands}`\n**🔢 Number of commands :**  `{len(CMD_HELP_BOT[commands]['commands'])}`",
@@ -424,7 +424,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             await event.edit(
                 result,
                 buttons=[
-                    custom.Button.inline(f"{hell_emoji} Return {hell_emoji}", data=f"Information[{page}]({cmd})")
+                    custom.Button.inline(f"{mikasa_emoji} Return {mikasa_emoji}", data=f"Information[{page}]({cmd})")
                 ],
                 link_preview=False,
             )

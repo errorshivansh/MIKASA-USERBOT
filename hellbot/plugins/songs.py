@@ -25,19 +25,19 @@ except:
 
 from . import *
 
-@bot.on(hell_cmd(pattern="lyrics(?: |$)(.*)", outgoing=True))
+@bot.on(mikasa_cmd(pattern="lyrics(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="lyrics(?: |$)(.*)", allow_sudo=True))
 async def nope(kraken):
-    hell = kraken.pattern_match.group(1)
-    await eor(kraken, f"Searching lyrics for  `{hell}` ...")
-    if not hell:
+    mikasa = kraken.pattern_match.group(1)
+    await eor(kraken, f"Searching lyrics for  `{mikasa}` ...")
+    if not mikasa:
         if kraken.is_reply:
             (await kraken.get_reply_message()).message
         else:
             await eod(kraken, "Give song name to get lyrics...")
             return
 
-    troll = await bot.inline_query("iLyricsBot", f"{(deEmojify(hell))}")
+    troll = await bot.inline_query("iLyricsBot", f"{(deEmojify(mikasa))}")
 
     await troll[0].click(
         kraken.chat_id,
@@ -49,7 +49,7 @@ async def nope(kraken):
     await kraken.delete()
     
 
-@bot.on(hell_cmd(pattern="song(?: |$)(.*)", outgoing=True))
+@bot.on(mikasa_cmd(pattern="song(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="song(?: |$)(.*)", allow_sudo=True))
 async def download_video(v_url):
     lazy = v_url
@@ -171,7 +171,7 @@ async def download_video(v_url):
         await rkp.delete()
 
 
-@bot.on(hell_cmd(pattern="vsong(?: |$)(.*)", outgoing=True))
+@bot.on(mikasa_cmd(pattern="vsong(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="vsong(?: |$)(.*)", allow_sudo=True))
 async def download_video(v_url):
     lazy = v_url

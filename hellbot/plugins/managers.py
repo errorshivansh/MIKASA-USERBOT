@@ -11,7 +11,7 @@ if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
     os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
 
 
-@bot.on(hell_cmd(pattern="ls ?(.*)", outgoing=True))
+@bot.on(mikasa_cmd(pattern="ls ?(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="ls ?(.*)", allow_sudo=True))
 async def lst(event):
     if event.fwd_from:
@@ -42,7 +42,7 @@ async def lst(event):
         await event.delete()
         
 
-@bot.on(hell_cmd(pattern="ls_local$", outgoing=True))
+@bot.on(mikasa_cmd(pattern="ls_local$", outgoing=True))
 @bot.on(sudo_cmd(pattern="ls_local$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -57,7 +57,7 @@ async def _(event):
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
     time.time() + PROCESS_RUN_TIME
-    process = await asyncio.create_subprocess_shell(
+    process = await asyncio.create_subprocess_smikasa(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
     OUTPUT = f"**Files in [ʍɨӄǟֆǟ ẞø†]({chnl_link}) DOWNLOADS Folder:**\n"
@@ -80,7 +80,7 @@ async def _(event):
     await eor(event, f"{OUTPUT}`{stdout.decode()}`")
 
 
-@bot.on(hell_cmd(pattern="ls_root$", outgoing=True))
+@bot.on(mikasa_cmd(pattern="ls_root$", outgoing=True))
 @bot.on(sudo_cmd(pattern="ls_root$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -92,7 +92,7 @@ async def _(event):
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
     time.time() + PROCESS_RUN_TIME
-    process = await asyncio.create_subprocess_shell(
+    process = await asyncio.create_subprocess_smikasa(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
     OUTPUT = f"**Files in root directory:**\n"
@@ -115,7 +115,7 @@ async def _(event):
     await eor(event, f"{OUTPUT}`{stdout.decode()}`")
 
 
-@bot.on(hell_cmd(pattern="ls_saved$", outgoing=True))
+@bot.on(mikasa_cmd(pattern="ls_saved$", outgoing=True))
 @bot.on(sudo_cmd(pattern="ls_saved$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -127,7 +127,7 @@ async def _(event):
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
     time.time() + PROCESS_RUN_TIME
-    process = await asyncio.create_subprocess_shell(
+    process = await asyncio.create_subprocess_smikasa(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
     OUTPUT = f"**Files in SAVED directory:**\n"
@@ -150,7 +150,7 @@ async def _(event):
     await eor(event, f"{OUTPUT}`{stdout.decode()}`")
 
 
-@bot.on(hell_cmd(pattern="rnsaved ?(.*)", outgoing=True))
+@bot.on(mikasa_cmd(pattern="rnsaved ?(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="rnsaved ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -166,7 +166,7 @@ async def _(event):
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
     time.time() + PROCESS_RUN_TIME
-    process = await asyncio.create_subprocess_shell(
+    process = await asyncio.create_subprocess_smikasa(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
     OUTPUT = f"**Files in root directory:**\n"
@@ -189,7 +189,7 @@ async def _(event):
     await eor(event, f"File renamed `{src}` to `{dst}`")
 
 
-@bot.on(hell_cmd(pattern="rnlocal ?(.*)", outgoing=True))
+@bot.on(mikasa_cmd(pattern="rnlocal ?(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="rnlocal ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -205,7 +205,7 @@ async def _(event):
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
     time.time() + PROCESS_RUN_TIME
-    process = await asyncio.create_subprocess_shell(
+    process = await asyncio.create_subprocess_smikasa(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
     OUTPUT = f"**Files in root directory:**\n"
@@ -228,7 +228,7 @@ async def _(event):
     await eor(event, f"File renamed `{src}` to `{dst}`")
 
 
-@bot.on(hell_cmd(pattern="delsave (.*)", outgoing=True))
+@bot.on(mikasa_cmd(pattern="delsave (.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="delsave (.*)", allow_sudo=True))
 async def handler(event):
     if event.fwd_from:
@@ -244,7 +244,7 @@ async def handler(event):
         await eod(event, "⛔️File Not Found😬")
 
 
-@bot.on(hell_cmd(pattern="delocal (.*)", outgoing=True))
+@bot.on(mikasa_cmd(pattern="delocal (.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="delocal (.*)", allow_sudo=True))
 async def handler(event):
     if event.fwd_from:

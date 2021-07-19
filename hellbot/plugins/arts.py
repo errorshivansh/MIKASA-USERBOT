@@ -1,6 +1,6 @@
 from . import *
 
-@bot.on(hell_cmd(pattern="carry (.*)"))
+@bot.on(mikasa_cmd(pattern="carry (.*)"))
 @bot.on(sudo_cmd(pattern="carry (.*)", allow_sudo=True))
 async def kraken(carry):
     if carry.fwd_from:
@@ -12,7 +12,7 @@ async def kraken(carry):
     )
 
 
-@bot.on(hell_cmd(pattern="ded (.*)"))
+@bot.on(mikasa_cmd(pattern="ded (.*)"))
 @bot.on(sudo_cmd(pattern="ded (.*)", allow_sudo=True))
 async def kraken(ded):
     if ded.fwd_from:
@@ -53,7 +53,7 @@ A = (
 )
 
 
-@bot.on(hell_cmd(pattern="sthink (.*)"))
+@bot.on(mikasa_cmd(pattern="sthink (.*)"))
 @bot.on(sudo_cmd(pattern="sthink (.*)", allow_sudo=True))
 async def kraken(think):
     if think.fwd_from:
@@ -80,7 +80,7 @@ async def kraken(think):
     await edit_or_reply(think, B)
 
 
-@bot.on(hell_cmd(pattern="sfrog (.*)"))
+@bot.on(mikasa_cmd(pattern="sfrog (.*)"))
 @bot.on(sudo_cmd(pattern="sfrog (.*)", allow_sudo=True))
 async def kraken(frogsay):
     if frogsay.fwd_from:
@@ -107,7 +107,7 @@ async def kraken(frogsay):
     await edit_or_reply(frogsay, C)
 
 
-@bot.on(hell_cmd(pattern="sdead (.*)"))
+@bot.on(mikasa_cmd(pattern="sdead (.*)"))
 @bot.on(sudo_cmd(pattern="sdead (.*)", allow_sudo=True))
 async def kraken(deadfrog):
     if deadfrog.fwd_from:
@@ -134,7 +134,7 @@ async def kraken(deadfrog):
     await edit_or_reply(deadfrog, D)
 
 
-@bot.on(hell_cmd(pattern="strump (.*)"))
+@bot.on(mikasa_cmd(pattern="strump (.*)"))
 @bot.on(sudo_cmd(pattern="strump (.*)", allow_sudo=True))
 async def kraken(trumpsay):
     if trumpsay.fwd_from:
@@ -161,7 +161,7 @@ async def kraken(trumpsay):
     await edit_or_reply(trumpsay, E)
 
 
-@bot.on(hell_cmd(pattern="schina (.*)"))
+@bot.on(mikasa_cmd(pattern="schina (.*)"))
 @bot.on(sudo_cmd(pattern="schina (.*)", allow_sudo=True))
 async def kraken(ckmkb):
     if ckmkb.fwd_from:
@@ -189,7 +189,7 @@ async def kraken(ckmkb):
     await edit_or_reply(ckmkb, F)
 
 
-@bot.on(hell_cmd(pattern=r"sshit$"))
+@bot.on(mikasa_cmd(pattern=r"sshit$"))
 @bot.on(sudo_cmd(pattern="sshit$", allow_sudo=True))
 async def kraken(shit):
     if shit.fwd_from:
@@ -197,7 +197,7 @@ async def kraken(shit):
     await edit_or_reply(shit, A)
 
 
-@bot.on(hell_cmd(pattern=r"elove$"))
+@bot.on(mikasa_cmd(pattern=r"elove$"))
 @bot.on(sudo_cmd(pattern="elove$", allow_sudo=True))
 async def kakashi(event):
     if event.fwd_from:
@@ -486,7 +486,7 @@ T = (
 )
 
 
-@bot.on(hell_cmd(pattern=r"monster$"))
+@bot.on(mikasa_cmd(pattern=r"monster$"))
 @bot.on(sudo_cmd(pattern="monster$", allow_sudo=True))
 async def bluedevilmonster(monster):
     if monster.fwd_from:
@@ -494,7 +494,7 @@ async def bluedevilmonster(monster):
     await edit_or_reply(monster, G)
 
 
-@bot.on(hell_cmd(pattern=r"pig$"))
+@bot.on(mikasa_cmd(pattern=r"pig$"))
 @bot.on(sudo_cmd(pattern="pig$", allow_sudo=True))
 async def bluedevilpig(pig):
     if pig.fwd_from:
@@ -502,7 +502,7 @@ async def bluedevilpig(pig):
     await edit_or_reply(pig, H)
 
 
-@bot.on(hell_cmd(pattern=r"gun$"))
+@bot.on(mikasa_cmd(pattern=r"gun$"))
 @bot.on(sudo_cmd(pattern="gun$", allow_sudo=True))
 async def bluedevilgun(gun):
     if gun.fwd_from:
@@ -510,7 +510,7 @@ async def bluedevilgun(gun):
     await edit_or_reply(gun, I)
 
 
-@bot.on(hell_cmd(pattern=r"dog$"))
+@bot.on(mikasa_cmd(pattern=r"dog$"))
 @bot.on(sudo_cmd(pattern="dog$", allow_sudo=True))
 async def bluedevildog(dog):
     if dog.fwd_from:
@@ -518,15 +518,15 @@ async def bluedevildog(dog):
     await edit_or_reply(dog, J)
 
 
-@bot.on(hell_cmd(pattern=r"hello$"))
-@bot.on(sudo_cmd(pattern="hello$", allow_sudo=True))
-async def bluedevilhello(hello):
-    if hello.fwd_from:
+@bot.on(mikasa_cmd(pattern=r"mikasao$"))
+@bot.on(sudo_cmd(pattern="mikasao$", allow_sudo=True))
+async def bluedevilmikasao(mikasao):
+    if mikasao.fwd_from:
         return
-    await edit_or_reply(hello, K)
+    await edit_or_reply(mikasao, K)
 
 
-@bot.on(hell_cmd(pattern=r"hmf$"))
+@bot.on(mikasa_cmd(pattern=r"hmf$"))
 @bot.on(sudo_cmd(pattern="hmf$", allow_sudo=True))
 async def bluedevilhmf(hmf):
     if hmf.fwd_from:
@@ -534,7 +534,7 @@ async def bluedevilhmf(hmf):
     await edit_or_reply(hmf, L)
 
 
-@bot.on(hell_cmd(pattern=r"couple$"))
+@bot.on(mikasa_cmd(pattern=r"couple$"))
 @bot.on(sudo_cmd(pattern="couple$", allow_sudo=True))
 async def bluedevilcouple(couple):
     if couple.fwd_from:
@@ -542,7 +542,7 @@ async def bluedevilcouple(couple):
     await edit_or_reply(couple, M)
 
 
-@bot.on(hell_cmd(pattern=r"sup$"))
+@bot.on(mikasa_cmd(pattern=r"sup$"))
 @bot.on(sudo_cmd(pattern="sup$", allow_sudo=True))
 async def bluedevilsupreme(supreme):
     if supreme.fwd_from:
@@ -550,7 +550,7 @@ async def bluedevilsupreme(supreme):
     await edit_or_reply(supreme, N)
 
 
-@bot.on(hell_cmd(pattern=r"india$"))
+@bot.on(mikasa_cmd(pattern=r"india$"))
 @bot.on(sudo_cmd(pattern="india$", allow_sudo=True))
 async def bluedevilindia(event):
     if event.fwd_from:
@@ -558,7 +558,7 @@ async def bluedevilindia(event):
     await edit_or_reply(event, O)
 
 
-@bot.on(hell_cmd(pattern=r"wc$"))
+@bot.on(mikasa_cmd(pattern=r"wc$"))
 @bot.on(sudo_cmd(pattern="wc$", allow_sudo=True))
 async def bluedevilwelcome(welcome):
     if welcome.fwd_from:
@@ -566,7 +566,7 @@ async def bluedevilwelcome(welcome):
     await edit_or_reply(welcome, P)
 
 
-@bot.on(hell_cmd(pattern=r"snk$"))
+@bot.on(mikasa_cmd(pattern=r"snk$"))
 @bot.on(sudo_cmd(pattern="snk$", allow_sudo=True))
 async def bluedevilsnake(snake):
     if snake.fwd_from:
@@ -574,7 +574,7 @@ async def bluedevilsnake(snake):
     await edit_or_reply(snake, Q)
 
 
-@bot.on(hell_cmd(pattern=r"bye$"))
+@bot.on(mikasa_cmd(pattern=r"bye$"))
 @bot.on(sudo_cmd(pattern="bye$", allow_sudo=True))
 async def bluedevilbye(bye):
     if bye.fwd_from:
@@ -582,7 +582,7 @@ async def bluedevilbye(bye):
     await edit_or_reply(bye, R)
 
 
-@bot.on(hell_cmd(pattern=r"shitos$"))
+@bot.on(mikasa_cmd(pattern=r"shitos$"))
 @bot.on(sudo_cmd(pattern="shitos$", allow_sudo=True))
 async def bluedevilshitos(shitos):
     if shitos.fwd_from:
@@ -590,7 +590,7 @@ async def bluedevilshitos(shitos):
     await edit_or_reply(shitos, S)
 
 
-@bot.on(hell_cmd(pattern=r"dislike$"))
+@bot.on(mikasa_cmd(pattern=r"dislike$"))
 @bot.on(sudo_cmd(pattern="dislike$", allow_sudo=True))
 async def bluedevildislike(dislike):
     if dislike.fwd_from:
@@ -609,7 +609,7 @@ CmdHelp("arts").add_command(
 ).add_command(
   'dog', None, 'Use and see'
 ).add_command(
-  'hello', None, 'Use and see'
+  'mikasao', None, 'Use and see'
 ).add_command(
   'hmf', None, 'Use and see'
 ).add_command(

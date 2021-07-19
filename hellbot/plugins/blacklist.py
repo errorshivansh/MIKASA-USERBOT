@@ -23,7 +23,7 @@ async def on_new_message(event):
             break
 
 
-@bot.on(hell_cmd(pattern="addblacklist ((.|\n)*)"))
+@bot.on(mikasa_cmd(pattern="addblacklist ((.|\n)*)"))
 @bot.on(sudo_cmd(pattern="addblacklist ((.|\n)*)", allow_sudo=True))
 async def on_add_black_list(event):
     if event.fwd_from:
@@ -43,7 +43,7 @@ async def on_add_black_list(event):
     )
 
 
-@bot.on(hell_cmd(pattern="rmblacklist ((.|\n)*)"))
+@bot.on(mikasa_cmd(pattern="rmblacklist ((.|\n)*)"))
 @bot.on(sudo_cmd(pattern="rmblacklist ((.|\n)*)", allow_sudo=True))
 async def on_delete_blacklist(event):
     if event.fwd_from:
@@ -64,7 +64,7 @@ async def on_delete_blacklist(event):
     )
 
 
-@bot.on(hell_cmd(pattern="listblacklist$"))
+@bot.on(mikasa_cmd(pattern="listblacklist$"))
 @bot.on(sudo_cmd(pattern="listblacklist$", allow_sudo=True))
 async def on_view_blacklist(event):
     if event.fwd_from:
@@ -93,7 +93,7 @@ async def on_view_blacklist(event):
 
 
 CmdHelp("blacklist").add_command(
-  "addblacklist", "<word>/<words>", "The given word or words will be added to blacklist in that specific chat if any user sends then the message gets deleted.\n\nNote :- If you are adding more than one word at time via this, then remember that new word must be given in a new line that is not [hi hello]. It must be as [hi \n hello]"
+  "addblacklist", "<word>/<words>", "The given word or words will be added to blacklist in that specific chat if any user sends then the message gets deleted.\n\nNote :- If you are adding more than one word at time via this, then remember that new word must be given in a new line that is not [hi mikasao]. It must be as [hi \n mikasao]"
 ).add_command(
   "rmblacklist", "<word>/<words>", "The given word or words will be removed from blacklist in that specific chat"
 ).add_command(

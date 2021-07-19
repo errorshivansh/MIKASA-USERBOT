@@ -10,7 +10,7 @@ from telethon.tl.types import InputMessagesFilterDocument
 from . import *
 
 
-@bot.on(hell_cmd(pattern=r"cmds"))
+@bot.on(mikasa_cmd(pattern=r"cmds"))
 @bot.on(sudo_cmd(pattern=r"cmds", allow_sudo=True))
 async def kk(event):
     if event.fwd_from:
@@ -20,18 +20,18 @@ async def kk(event):
         reply_to_id = event.reply_to_msg_id
     cmd = "ls MikasaBot/plugins"
     thumb = mikasa_logo
-    process = await asyncio.create_subprocess_shell(
+    process = await asyncio.create_subprocess_smikasa(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
     stdout, stderr = await process.communicate()
     o = stdout.decode()
     _o = o.split("\n")
     o = "\n".join(_o)
-    OUTPUT = f"List of Plugins in bot :- \n\n{o}\n\n<><><><><><><><><><><><><><><><><><><><><><><><>\nHELP:- If you want to know the commands for a plugin, do :- \n.plinfo <plugin name> without the < > brackets. \nJoin {hell_grp} for help."
+    OUTPUT = f"List of Plugins in bot :- \n\n{o}\n\n<><><><><><><><><><><><><><><><><><><><><><><><>\nHELP:- If you want to know the commands for a plugin, do :- \n.plinfo <plugin name> without the < > brackets. \nJoin {mikasa_grp} for help."
     if len(OUTPUT) > 69:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "cmd_list.text"
-            hell_file = await bot.send_file(
+            mikasa_file = await bot.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,
@@ -39,11 +39,11 @@ async def kk(event):
                 thumb=thumb,
                 reply_to=reply_to_id,
             )
-            await edit_or_reply(hell_file, f"Output Too Large. This is the file for the list of plugins in bot.\n\n**BY :-** {MIKASA_USER}")
+            await edit_or_reply(mikasa_file, f"Output Too Large. This is the file for the list of plugins in bot.\n\n**BY :-** {MIKASA_USER}")
             await event.delete()
 
 
-@bot.on(hell_cmd(pattern=r"send (?P<shortname>\w+)", outgoing=True))
+@bot.on(mikasa_cmd(pattern=r"send (?P<shortname>\w+)", outgoing=True))
 @bot.on(sudo_cmd(pattern=r"send (?P<shortname>\w+)", allow_sudo=True))
 async def send(event):
     if event.fwd_from:
@@ -68,7 +68,7 @@ async def send(event):
         await eod(event, "File not found..... Kek")
 
 
-@bot.on(hell_cmd(pattern="install$", outgoing=True))
+@bot.on(mikasa_cmd(pattern="install$", outgoing=True))
 @bot.on(sudo_cmd(pattern="install$", allow_sudo=True))
 async def install(event):
     if event.fwd_from:
@@ -109,7 +109,7 @@ async def install(event):
             await eod(event, f"**Failed to Install** \n`Error`\n{str(e)}")
             return os.remove(downloaded_file_name)
 
-@bot.on(hell_cmd(pattern=r"uninstall (?P<shortname>\w+)", outgoing=True))
+@bot.on(mikasa_cmd(pattern=r"uninstall (?P<shortname>\w+)", outgoing=True))
 @bot.on(sudo_cmd(pattern=r"uninstall (?P<shortname>\w+)", allow_sudo=True))
 async def uninstall(kraken):
     if kraken.fwd_from:
@@ -124,7 +124,7 @@ async def uninstall(kraken):
         await kraken.edit("Error: %s : %s" % (dir_path, e.strerror))
 
 
-@bot.on(hell_cmd(pattern=r"unload (?P<shortname>\w+)$"))
+@bot.on(mikasa_cmd(pattern=r"unload (?P<shortname>\w+)$"))
 @bot.on(sudo_cmd(pattern=r"unload (?P<shortname>\w+)$", allow_sudo=True))
 async def unload(event):
     if event.fwd_from:
@@ -141,7 +141,7 @@ async def unload(event):
         )
 
 
-@bot.on(hell_cmd(pattern=r"load (?P<shortname>\w+)$"))
+@bot.on(mikasa_cmd(pattern=r"load (?P<shortname>\w+)$"))
 @bot.on(sudo_cmd(pattern=r"load (?P<shortname>\w+)$", allow_sudo=True))
 async def load(event):
     if event.fwd_from:
