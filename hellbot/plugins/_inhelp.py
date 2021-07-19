@@ -199,11 +199,11 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
 
         else:
             result = builder.article(
-                "@Its_HellBot",
+                "@MIKASA_BOT_OP",
                 text="""**Hey! This is [ʍɨӄǟֆǟ ẞø†](https://t.me/its_MikasaBot) \nYou can know more about me from the links given below 👇**""",
                 buttons=[
                     [
-                        custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/Its_HellBot"),
+                        custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/MIKASA_BOT_OP"),
                         custom.Button.url(
                             "⚡ GROUP ⚡", "https://t.me/MikasaBot_chat"
                         ),

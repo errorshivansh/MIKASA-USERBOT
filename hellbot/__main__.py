@@ -77,7 +77,7 @@ LOGS.info("Starting Bot Mode !")
 tbot.start()
 LOGS.info("⚡ Your HellBot Is Now Working ⚡")
 LOGS.info(
-    "Head to @Its_HellBot for Updates. Also join chat group to get help regarding to HellBot."
+    "Head to @MIKASA_BOT_OP for Updates. Also join chat group to get help regarding to HellBot."
 )
 
 # that's life...
@@ -87,14 +87,14 @@ async def hell_is_on():
             await bot.send_file(
                 Config.LOGGER_ID,
                 HELL_PIC,
-                caption=f"#START \n\nDeployed ʍɨӄǟֆǟ ẞø† Successfully\n\n**ʍɨӄǟֆǟ ẞø† - {hellver}**\n\nType `{hl}ping` or `{hl}alive` to check! \n\nJoin [ʍɨӄǟֆǟ ẞø† Channel](t.me/Its_HellBot) for Updates & [ʍɨӄǟֆǟ ẞø† Chat](t.me/MikasaBot_chat) for any query regarding ʍɨӄǟֆǟ ẞø†",
+                caption=f"#START \n\nDeployed ʍɨӄǟֆǟ ẞø† Successfully\n\n**ʍɨӄǟֆǟ ẞø† - {hellver}**\n\nType `{hl}ping` or `{hl}alive` to check! \n\nJoin [ʍɨӄǟֆǟ ẞø† Channel](t.me/MIKASA_BOT_OP) for Updates & [ʍɨӄǟֆǟ ẞø† Chat](t.me/MikasaBot_chat) for any query regarding ʍɨӄǟֆǟ ẞø†",
             )
     except Exception as e:
         LOGS.info(str(e))
 
 # Join HellBot Channel after deploying 🤐😅
     try:
-        await bot(JoinChannelRequest("@Its_HellBot"))
+        await bot(JoinChannelRequest("@MIKASA_BOT_OP"))
     except BaseException:
         pass
 
