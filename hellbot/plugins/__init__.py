@@ -17,7 +17,7 @@ restlo = "./MikasaBot/resources/pics/rest.jpeg"
 shuru = "./MikasaBot/resources/pics/shuru.jpg"
 hl = Config.HANDLER
 shl = Config.SUDO_HANDLER
-hell_ver = __mikasa__
+mikasa_ver = __mikasa__
 tel_ver = version.__version__
 
 async def get_user_id(ids):
@@ -49,9 +49,9 @@ if "@" in my_group:
     my_group = my_group.replace("@", "")
 
 chnl_link = "https://t.me/MIKASA_BOT_OP"
-hell_channel = f"[†hê ʍɨӄǟֆǟ ẞø†]({chnl_link})"
+mikasa_channel = f"[†hê ʍɨӄǟֆǟ ẞø†]({chnl_link})"
 grp_link = "https://t.me/Mikasa_bot_support"
-hell_grp = f"[ʍɨӄǟֆǟ ẞø† Group]({grp_link})"
+mikasa_grp = f"[ʍɨӄǟֆǟ ẞø† Group]({grp_link})"
 
 WELCOME_FORMAT = """**Use these fomats in your welcome note to make them attractive.**
   {mention} :  To mention the user
