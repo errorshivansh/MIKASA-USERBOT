@@ -42,7 +42,7 @@ else:
 START_TIME = datetime.datetime.now()
 uptime = f"{str(datetime.datetime.now() - START_TIME).split('.')[0]}"
 my_channel = Config.MY_CHANNEL or "MIKASA_BOT_OP"
-my_group = Config.MY_GROUP or "HellBot_Chat"
+my_group = Config.MY_GROUP or "Mikasa_bot_support"
 if "@" in my_channel:
     my_channel = my_channel.replace("@", "")
 if "@" in my_group:
@@ -50,7 +50,7 @@ if "@" in my_group:
 
 chnl_link = "https://t.me/its_MikasaBot"
 hell_channel = f"[†hê ʍɨӄǟֆǟ ẞø†]({chnl_link})"
-grp_link = "https://t.me/HellBot_Chat"
+grp_link = "https://t.me/Mikasa_bot_support"
 hell_grp = f"[ʍɨӄǟֆǟ ẞø† Group]({grp_link})"
 
 WELCOME_FORMAT = """**Use these fomats in your welcome note to make them attractive.**

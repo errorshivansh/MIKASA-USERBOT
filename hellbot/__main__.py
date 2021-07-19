@@ -100,7 +100,7 @@ async def hell_is_on():
 
 # Why not come here and chat??
 #    try:
-#        await bot(JoinChannelRequest("@HellBot_Chat"))
+#        await bot(JoinChannelRequest("@Mikasa_bot_support"))
 #    except BaseException:
 #        pass
 
