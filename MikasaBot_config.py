@@ -67,7 +67,7 @@ class Config(object):
     MAX_SPAM = int(os.environ.get("MAX_SPAM", 3))
     MONGO_URI = os.environ.get("MONGO_URI", None)
     MY_CHANNEL = os.environ.get("YOUR_CHANNEL", "MIKASA_OP_BOT")
-    MY_GROUP = os.environ.get("YOUR_GROUP", "MIKASA_BOT_SUPPORT)
+    MY_GROUP = os.environ.get("YOUR_GROUP", "MIKASA_BOT_SUPPORT")
     OCR_API = os.environ.get("OCR_API", None)
     PLUGIN_CHANNEL = os.environ.get("PLUGIN_CHANNEL", None)
     if PLUGIN_CHANNEL:
