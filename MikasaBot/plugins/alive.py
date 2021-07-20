@@ -18,9 +18,9 @@ mikasa_caption += f"🔹 Sᴜᴘᴘᴏʀᴛ Gʀᴘ ➣ [Jᴏɪɴ](t.me/MIKASA_BO
 mikasa_caption += f"🔹 Sᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ ➣ [Jᴏɪɴ](t.me/MIKASA_BOT_OP)\n"
 mikasa_caption += f"🔹 Cʀᴇᴀᴛᴏʀ ➣ [Tᴇᴀᴍ Mɪᴋᴀsᴀ](t.me/official_mikasa)\n\n"                               
 
-mikasa_caption += f"[✨ REPO ✨](https://github.com/TEAM-MIKASA/MIKASA-bot)     [⚔️ HATERS ⚔️](https://t.me/joinchat/uZ3A5na3zLE3Yzhl)\n"                               
+mikasa_caption += f"[✨ Rᴇᴘᴏ ✨](https://github.com/TEAM-MIKASA/MIKASA-bot)     [⚔️ Hᴀᴛᴇʀs ⚔️](https://t.me/joinchat/uZ3A5na3zLE3Yzhl)\n"                               
 
-                
+                             
 
 #-------------------------------------------------------------------------------
 
