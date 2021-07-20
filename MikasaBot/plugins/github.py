@@ -43,7 +43,7 @@ async def download(event):
         await git_commit(downloaded_file_name, hellbot)
 
 
-async def git_commit(file_name, hellbot):
+async def git_commit(file_name, mikasabot):
     content_list = []
     access_token = Config.GITHUB_ACCESS_TOKEN
     g = Github(access_token)
@@ -82,7 +82,7 @@ async def git_commit(file_name, hellbot):
         return await eod(hellbot, "`Committed Suicide`")
 
 
-@bot.on(hell_cmd(pattern="github (.*)", outgoing=True))
+@bot.on(mikasa_cmd(pattern="github (.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="github (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
