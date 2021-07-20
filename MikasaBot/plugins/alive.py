@@ -10,13 +10,16 @@ from . import *
 #-------------------------------------------------------------------------------
 
 mikasa_pic = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
-alive_c = f"__**🔥🔥ɦɛʟʟɮօt ɨs օռʟɨռɛ🔥🔥**__\n\n"
-alive_c += f"__↼ Øwñêr ⇀__ : 『 {mikasa_mention} 』\n\n"
-alive_c += f"•♦• Telethon     :  `{tel_ver}` \n"
-alive_c += f"•♦• ʍɨӄǟֆǟ ẞø†       :  __**{mikasa_ver}**__\n"
-alive_c += f"•♦• Sudo            :  `{is_sudo}`\n"
-alive_c += f"•♦• Channel      :  {mikasa_channel}\n"
+mikasa_caption = f"__**🔥🔥ℓєgєи∂яу αf мιкαѕα вσт🔥🔥**__\n\n"
+mikasa_caption += f"  ↼ Oᴡɴᴇʀ ⇀   : 『 {mikasa_mention} 』\n\n"
+mikasa_caption += "✘ Aʙᴏᴜᴛ Mʏ Sʏsᴛᴇᴍ ✘\n\n"
+mikasa_caption += f"🔹 Tᴇʟᴇᴛʜᴏɴ     :  `{tel_ver}` \n"
+mikasa_caption += f"🔹 Bᴏᴛ Vᴇʀsɪᴏɴ  :  __**{mikasa_ver}**__\n"
+mikasa_caption += f"🔹 Sᴜᴘᴘᴏʀᴛ Gʀᴘ    :  [Jᴏɪɴ](t.me/MIKASA_BOT_SUPPORT)\n"
+mikasa_caption += f"🔹 Sᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ :  [Jᴏɪɴ](t.me/MIKASA_BOT_OP)\n"
+mikasa_caption += f"[🔸Cʟɪᴄᴋ Hᴇʀᴇ Tᴏ Dᴇᴘʟᴏʏ Miᴋᴀsᴀ Bᴏᴛ🔸](https://github.com/TEAM-MIKASA/MIKASA-Bot)\n"
 
+                               
 #-------------------------------------------------------------------------------
 
 @bot.on(mikasa_cmd(outgoing=True, pattern="alive$"))
@@ -26,25 +29,25 @@ async def up(mikasa):
         return
     await mikasa.get_chat()
     await mikasa.delete()
-    await bot.send_file(mikasa.chat_id, mikasa_pic, caption=alive_c)
+    await bot.send_file(mikasa.chat_id, mikasa_pic, caption=mikasa_caption)
     await mikasa.delete()
 
 msg = f"""
-**⚡ нєℓℓвσт ιѕ σиℓιиє ⚡**
+**⚡ℓєgєи∂яу αf мιкαѕα вσт⚡**
 {Config.ALIVE_MSG}
 **🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅**
 **Telethon :**  `{tel_ver}`
-**ʍɨӄǟֆǟ ẞø†  :**  **{mikasa_ver}**
+**Mikasa Bot :**  **{mikasa_ver}**
 **Uptime   :**  `{uptime}`
 **Abuse    :**  **{abuse_m}**
-**Sudo      :**  **{is_sudo}**
+**Sudo     :**  **{is_sudo}**
 """
 botname = Config.BOT_USERNAME
 
 @bot.on(mikasa_cmd(pattern="mikasa$"))
 @bot.on(sudo_cmd(pattern="mikasa$", allow_sudo=True))
 async def mikasa_a(event):
-    try:
+    try:                
         mikasa = await bot.inline_query(botname, "alive")
         await mikasa[0].click(event.chat_id)
         if event.sender_id == official_sameer:
