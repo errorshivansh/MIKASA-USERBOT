@@ -10,7 +10,7 @@ from . import *
 #-------------------------------------------------------------------------------
 
 mikasa_pic = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
-mikasa_caption = f"**🔥🔥 ℓєgєи∂яу αf мιкαѕα вσт 🔥🔥**\n\n"
+mikasa_caption = f"**__🔥🔥 ℓєgєи∂яу αf мιкαѕα вσт 🔥🔥__**\n\n"
 mikasa_caption += f"  ↼ Oᴡɴᴇʀ ⇀   : 『 {mikasa_mention} 』\n\n"
 mikasa_caption += "✘ Aʙᴏᴜᴛ Mʏ Sʏsᴛᴇᴍ ✘\n\n"
 mikasa_caption += f"🔹 Tᴇʟᴇᴛʜᴏɴ               :  `{tel_ver}` \n"
