@@ -7,4 +7,4 @@ echo """
                                 
 """
 
-python3 -m hellbot
+python3 -m mikasabot
