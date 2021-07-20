@@ -10,14 +10,13 @@ from . import *
 #-------------------------------------------------------------------------------
 
 mikasa_pic = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
-mikasa_caption = f"**🔥🔥ℓєgєи∂яу αf мιкαѕα вσт🔥🔥**\n\n"
+mikasa_caption = f"**🔥🔥 ℓєgєи∂яу αf мιкαѕα вσт 🔥🔥**\n\n"
 mikasa_caption += f"  ↼ Oᴡɴᴇʀ ⇀   : 『 {mikasa_mention} 』\n\n"
 mikasa_caption += "✘ Aʙᴏᴜᴛ Mʏ Sʏsᴛᴇᴍ ✘\n\n"
-mikasa_caption += f"🔹 Tᴇʟᴇᴛʜᴏɴ              :  `{tel_ver}` \n"
-mikasa_caption += f"🔹 Cʀᴇᴀᴛᴏʀ  :   [Tᴇᴀᴍ Mɪᴋᴀsᴀ](t.me/official_mikasa)\n"
+mikasa_caption += f"🔹 Tᴇʟᴇᴛʜᴏɴ               :  `{tel_ver}` \n"
 mikasa_caption += f"🔹 Sᴜᴘᴘᴏʀᴛ Gʀᴘ         :  [Jᴏɪɴ](t.me/MIKASA_BOT_SUPPORT)\n"
-mikasa_caption += f"🔹 Sᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ :  [Jᴏɪɴ](t.me/MIKASA_BOT_OP)\n\n"
-                               
+mikasa_caption += f"🔹 Sᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ :  [Jᴏɪɴ](t.me/MIKASA_BOT_OP)\n"
+mikasa_caption += f"🔹 Cʀᴇᴀᴛᴏʀ  :   [Tᴇᴀᴍ Mɪᴋᴀsᴀ](t.me/official_mikasa)\n"                               
 #-------------------------------------------------------------------------------
 
 @bot.on(mikasa_cmd(outgoing=True, pattern="alive$"))
