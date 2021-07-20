@@ -1,5 +1,5 @@
 
-from mikasa_config import Config
+from MikasaBot_config import Config
 
 class Development(Config):
   # get these values from my.telegram.org. 
