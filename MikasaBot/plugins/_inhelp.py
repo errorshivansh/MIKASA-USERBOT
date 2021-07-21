@@ -133,7 +133,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 )
             ]
 
-        elif event.query.user_id == bot.uid and query == "mikasa":
+        elif event.query.user_id == bot.uid and query == "alive":
             he_ll = mikasa_txt.format(Config.ALIVE_MSG, tel_ver, mikasa_ver, uptime, abuse_m, is_sudo)
             alv_btn = [
                 [Button.url(f"{MIKASA_USER}", f"tg://openmessage?user_id={official_sameer}")],
