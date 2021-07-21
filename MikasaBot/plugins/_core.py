@@ -160,15 +160,15 @@ async def load(event):
         )
 
 CmdHelp("core").add_command(
-  "install", "<reply to a .py file>", "Installs the replied python file if suitable to ʍɨӄǟֆǟ ẞø†'s codes."
+  "install", "<reply to a .py file>", "Installs the replied python file if suitable to alive's codes."
 ).add_command(
-  "uninstall", "<plugin name>", "Uninstalls the given plugin from ʍɨӄǟֆǟ ẞø†. To get that again do .restart", "uninstall mikasa"
+  "uninstall", "<plugin name>", "Uninstalls the given plugin from ʍɨӄǟֆǟ ẞø†. To get that again do .restart", "uninstall alive"
 ).add_command(
-  "load", "<plugin name>", "Loades the unloaded plugin to your userbot", "load mikasa"
+  "load", "<plugin name>", "Loades the unloaded plugin to your userbot", "load alive"
 ).add_command(
-  "unload", "<plugin name>", "Unloads the plugin from your userbot", "unload mikasa"
+  "unload", "<plugin name>", "Unloads the plugin from your userbot", "unload alive"
 ).add_command(
-  "send", "<file name>", "Sends the given file from your userbot server, if any.", "send mikasa"
+  "send", "<file name>", "Sends the given file from your userbot server, if any.", "send alive"
 ).add_command(
   "cmds", None, "Gives out the list of modules in MikasaBot."
 ).add_warning(
