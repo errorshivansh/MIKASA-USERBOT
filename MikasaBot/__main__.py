@@ -87,7 +87,7 @@ async def mikasa_is_on():
             await bot.send_file(
                 Config.LOGGER_ID,
                 MIKASA_PIC,
-                caption=f"#START \n\nDeployed ʍɨӄǟֆǟ ẞø† Successfully\n\n**ʍɨӄǟֆǟ ẞø† - {mikasaver}**\n\nType `{hl}ping` or `{hl}mikasa` to check! \n\nJoin [ʍɨӄǟֆǟ ẞø† Channel](t.me/MIKASA_BOT_OP) for Updates & [ʍɨӄǟֆǟ ẞø† Chat](t.me/Mikasa_bot_support) for any query regarding ʍɨӄǟֆǟ ẞø†",
+                caption=f"#START \n\nDeployed ʍɨӄǟֆǟ ẞø† Successfully\n\n**ʍɨӄǟֆǟ ẞø† - {mikasaver}**\n\nType `{hl}ping` or `{hl}alive` to check! \n\nJoin [ʍɨӄǟֆǟ ẞø† Channel](t.me/MIKASA_BOT_OP) for Updates & [ʍɨӄǟֆǟ ẞø† Chat](t.me/Mikasa_bot_support) for any query regarding ʍɨӄǟֆǟ ẞø†",
             )
     except Exception as e:
         LOGS.info(str(e))
