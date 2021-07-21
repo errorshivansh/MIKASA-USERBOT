@@ -45,7 +45,7 @@ HELL_FIRST = (
     "{} is currently unavailable.\nThis is an automated message.\n\n"
     "{}\n\n**Please Choose Why You Are Here!!**".format(mikasa_mention, mssge))
 
-alive_txt = """
+mikasa_txt = """
 **⚜️ MIKASA IS ON ⚜️**
 {}
 **🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅**
@@ -133,8 +133,8 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 )
             ]
 
-        elif event.query.user_id == bot.uid and query == "alive":
-            he_ll = alive_txt.format(Config.ALIVE_MSG, tel_ver, mikasa_ver, uptime, abuse_m, is_sudo)
+        elif event.query.user_id == bot.uid and query == "mikasa":
+            he_ll = mikasa_txt.format(Config.ALIVE_MSG, tel_ver, mikasa_ver, uptime, abuse_m, is_sudo)
             alv_btn = [
                 [Button.url(f"{MIKASA_USER}", f"tg://openmessage?user_id={official_sameer}")],
                 [Button.url("My Channel", f"https://t.me/{my_channel}"), 

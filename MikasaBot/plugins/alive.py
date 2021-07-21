@@ -24,8 +24,8 @@ mikasa_caption += f"[✨ Rᴇᴘᴏ ✨](https://github.com/TEAM-MIKASA/MIKASA-b
 
 #-------------------------------------------------------------------------------
 
-@bot.on(mikasa_cmd(outgoing=True, pattern="alive$"))
-@bot.on(sudo_cmd(pattern="alive$", allow_sudo=True))
+@bot.on(mikasa_cmd(outgoing=True, pattern="mikasa$"))
+@bot.on(sudo_cmd(pattern="mikasa$", allow_sudo=True))
 async def up(mikasa):
     if mikasa.fwd_from:
         return
@@ -50,7 +50,7 @@ botname = Config.BOT_USERNAME
 @bot.on(sudo_cmd(pattern="mikasa$", allow_sudo=True))
 async def mikasa_a(event):
     try:                
-        mikasa = await bot.inline_query(botname, "alive")
+        mikasa = await bot.inline_query(botname, "mikasa")
         await mikasa[0].click(event.chat_id)
         if event.sender_id == official_sameer:
             await event.delete()
@@ -58,8 +58,8 @@ async def mikasa_a(event):
         await eor(event, msg)
 
 
-CmdHelp("alive").add_command(
-  "alive", None, "Shows the Default Alive Message"
+CmdHelp("mikasa").add_command(
+  "mikasa", None, "Shows the Default Alive Message"
 ).add_command(
   "mikasa", None, "Shows Inline Alive Menu with more details."
 ).add_warning(

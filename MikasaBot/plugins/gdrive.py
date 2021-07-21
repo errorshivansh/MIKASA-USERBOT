@@ -31,7 +31,7 @@ async def save_response_content(response, destination):
     CHUNK_SIZE = 32768
     with open(destination, "wb") as f:
         for chunk in response.iter_content(CHUNK_SIZE):
-            if chunk:  # filter out keep-alive new chunks
+            if chunk:  # filter out keep-mikasa new chunks
                 f.write(chunk)
     return destination
 

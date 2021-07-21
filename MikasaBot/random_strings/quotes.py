@@ -72,7 +72,7 @@ GDNOON = [
     "`The deep blue sky of this bright afternoon reminds me of the deepness of your heart and the brightness of your soul. May you have a memorable afternoon!`",
     "`Your presence could make this afternoon much more pleasurable for me. Your company is what I cherish all the time. Good afternoon!`",
     "`A relaxing afternoon wind and the sweet pleasure of your company can make my day complete. Missing you so badly during this time of the day! Good afternoon!`",
-    "`Wishing you an afternoon experience so sweet and pleasant that feel thankful to be alive today. May you have the best afternoon of your life today!`",
+    "`Wishing you an afternoon experience so sweet and pleasant that feel thankful to be mikasa today. May you have the best afternoon of your life today!`",
     "`My wishes will always be with you, Morning wish to make you feel fresh, Afternoon wish to accompany you, Evening wish to refresh you, Night wish to comfort you with sleep, Good afternoon dear!`",
     "`Noon time – it’s time to have a little break, Take time to breathe the warmth of the sun, Who is shining up in between the clouds, Good afternoon!`",
     "`You are the cure that I need to take three times a day, in the morning, at the night and in the afternoon. I am missing you a lot right now. Good afternoon!`",
@@ -285,7 +285,7 @@ CRI = [
 ]
 
 GDNIGHT = [
-    "`Good night keep your dreams alive`",
+    "`Good night keep your dreams mikasa`",
     "`Night, night, to a dear friend! May you sleep well!`",
     "`May the night fill with stars for you. May counting every one, give you contentment!`",
     "`Wishing you comfort, happiness, and a good night’s sleep!`",
@@ -301,7 +301,7 @@ GDNIGHT = [
     "`Sleep well, dear friend and have sweet dreams.`",
     "`As we wait for a brand new day, good night and have beautiful dreams.`",
     "`Dear friend, I wish you a night of peace and bliss. Good night.`",
-    "`Darkness cannot last forever. Keep the hope alive. Good night.`",
+    "`Darkness cannot last forever. Keep the hope mikasa. Good night.`",
     "`By hook or crook you shall have sweet dreams tonight. Have a good night, buddy!`",
     "`Good night, my friend. I pray that the good Lord watches over you as you sleep. Sweet dreams.`",
     "`Good night, friend! May you be filled with tranquility!`",
