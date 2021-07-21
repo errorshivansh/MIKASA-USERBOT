@@ -24,8 +24,8 @@ mikasa_caption += f"[✨ Rᴇᴘᴏ ✨](https://github.com/TEAM-MIKASA/MIKASA-b
 
 #-------------------------------------------------------------------------------
 
-@bot.on(mikasa_cmd(outgoing=True, pattern="mikasa$"))
-@bot.on(sudo_cmd(pattern="mikasa$", allow_sudo=True))
+@bot.on(mikasa_cmd(outgoing=True, pattern="alive$"))
+@bot.on(sudo_cmd(pattern="alive$", allow_sudo=True))
 async def up(mikasa):
     if mikasa.fwd_from:
         return
