@@ -43,7 +43,7 @@ USER_BOT_WARN_ZERO = "Enough Of Your Flooding In My Master's PM!! \n\n**🚫 Blo
 HELL_FIRST = (
     "**🔥 ʍɨӄǟֆǟ ẞø† Prîvã†é Sêçürïty Prø†öçõl 🔥**\n\nThis is to inform you that "
     "{} is currently unavailable.\nThis is an automated message.\n\n"
-    "{}\n\n**Please Choose Why You Are Here!!**".format(hell_mention, mssge))
+    "{}\n\n**Please Choose Why You Are Here!!**".format(mikasa_mention, mssge))
 
 alive_txt = """
 **⚜️ ʍɨӄǟֆǟ ẞø†  ιѕ σиℓιиє ⚜️**
@@ -98,7 +98,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         builder = event.builder
         result = None
         query = event.text
-        if event.query.user_id == bot.uid and query == "hellbot_help":
+        if event.query.user_id == bot.uid and query == "mikasabot_help":
             rev_text = query[::-1]
             veriler = button(0, sorted(CMD_HELP))
             apn = []
@@ -113,9 +113,9 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         elif event.query.user_id == bot.uid and query.startswith("fsub"):
             hunter = event.pattern_match.group(1)
-            hell = hunter.split("+")
-            user = await bot.get_entity(int(hell[0]))
-            channel = await bot.get_entity(int(hell[1]))
+            mikasa = hunter.split("+")
+            user = await bot.get_entity(int(mikasa[0]))
+            channel = await bot.get_entity(int(mikasa[1]))
             msg = f"**👋 Welcome** [{user.first_name}](tg://user?id={user.id}), \n\n**📍 You need to Join** {channel.title} **to chat in this group.**"
             if not channel.username:
                 link = (await bot(ExportChatInviteRequest(channel))).link
@@ -293,17 +293,17 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"unmute")))
     async def on_pm_click(event):
         hunter = (event.data_match.group(1)).decode("UTF-8")
-        hell = hunter.split("+")
-        if not event.sender_id == int(hell[0]):
+        mikasa = hunter.split("+")
+        if not event.sender_id == int(mikasa[0]):
             return await event.answer("This Ain't For You!!", alert=True)
         try:
-            await bot(GetParticipantRequest(int(hell[1]), int(hell[0])))
+            await bot(GetParticipantRequest(int(mikasa[1]), int(mikasa[0])))
         except UserNotParticipantError:
             return await event.answer(
                 "You need to join the channel first.", alert=True
             )
         await bot.edit_permissions(
-            event.chat_id, int(hell[0]), send_message=True, until_date=None
+            event.chat_id, int(mikasa[0]), send_message=True, until_date=None
         )
         await event.edit("Yay! You can chat now !!")
 
@@ -331,7 +331,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"close")))
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid or event.query.user_id in Config.SUDO_USERS:
-            veriler = custom.Button.inline(f"{hell_emoji} Re-Open Menu {hell_emoji}", data="reopen")
+            veriler = custom.Button.inline(f"{mikasa_emoji} Re-Open Menu {mikasa_emoji}", data="reopen")
             await event.edit(f"**⚜️ ʍɨӄǟֆǟ ẞø† Mêñû Prõvîdêr ìs ñôw Çlösëd ⚜️**\n\n**Bot Of :**  {mikasa_mention}\n\n        [©️ ʍɨӄǟֆǟ ẞø† ™️](t.me/mikasa_bot_op)", buttons=veriler, link_preview=False)
         else:
             reply_pop_up_alert = "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © ʍɨӄǟֆǟ ẞø† ™"
