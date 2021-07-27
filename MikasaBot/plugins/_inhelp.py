@@ -43,15 +43,14 @@ USER_BOT_WARN_ZERO = "Enough Of Your Flooding In My Master's PM!! \n\n**🚫 Blo
 HELL_FIRST = (
     "**🔥 ʍɨӄǟֆǟ ẞø† Prîvã†é Sêçürïty Prø†öçõl 🔥**\n\nThis is to inform you that "
     "{} is currently unavailable.\nThis is an automated message.\n\n"
-    "{}\n\n**Please Choose Why You Are Here!!**".format(mikasa_mention, mssge))
+    "{}\n\n**Please Choose Why You Are Here!!**".format(hell_mention, mssge))
 
-mikasa_txt = """
-**⚜️ MIKASA IS ON ⚜️**
+alive_txt = """
+**⚜️ ʍɨӄǟֆǟ ẞø†  ιѕ σиℓιиє ⚜️**
 {}
 **🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅**
-
 **Telethon :**  `{}`
-**ʍɨӄǟֆǟ ẞø†  :**  **{}**
+**ʍɨӄǟֆǟ ẞø† :**  **{}**
 **Uptime   :**  `{}`
 **Abuse    :**  **{}**
 **Sudo      :**  **{}**
@@ -99,7 +98,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         builder = event.builder
         result = None
         query = event.text
-        if event.query.user_id == bot.uid and query == "Mikasa_bot_support":
+        if event.query.user_id == bot.uid and query == "hellbot_help":
             rev_text = query[::-1]
             veriler = button(0, sorted(CMD_HELP))
             apn = []
@@ -114,9 +113,9 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         elif event.query.user_id == bot.uid and query.startswith("fsub"):
             hunter = event.pattern_match.group(1)
-            mikasa = hunter.split("+")
-            user = await bot.get_entity(int(mikasa[0]))
-            channel = await bot.get_entity(int(mikasa[1]))
+            hell = hunter.split("+")
+            user = await bot.get_entity(int(hell[0]))
+            channel = await bot.get_entity(int(hell[1]))
             msg = f"**👋 Welcome** [{user.first_name}](tg://user?id={user.id}), \n\n**📍 You need to Join** {channel.title} **to chat in this group.**"
             if not channel.username:
                 link = (await bot(ExportChatInviteRequest(channel))).link
@@ -134,9 +133,9 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             ]
 
         elif event.query.user_id == bot.uid and query == "alive":
-            he_ll = mikasa_txt.format(Config.ALIVE_MSG, tel_ver, mikasa_ver, uptime, abuse_m, is_sudo)
+            he_ll = alive_txt.format(Config.ALIVE_MSG, tel_ver, mikasa_ver, uptime, abuse_m, is_sudo)
             alv_btn = [
-                [Button.url(f"{MIKASA_USER}", f"tg://openmessage?user_id={official_sameer}")],
+                [Button.url(f"{MIKASA_USER}", f"tg://openmessage?user_id={opsameer}")],
                 [Button.url("My Channel", f"https://t.me/{my_channel}"), 
                 Button.url("My Group", f"https://t.me/{my_group}")],
             ]
@@ -151,20 +150,20 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 result = builder.document(
                     ALV_PIC,
                     text=he_ll,
-                    title="Mikasa Alive",
+                    title="MikasaBot Alive",
                     buttons=alv_btn,
                     link_preview=False,
                 )
             else:
                 result = builder.article(
                     text=he_ll,
-                    title="MikasaBot Alive",
+                    title="Mikasabot Alive",
                     buttons=alv_btn,
                     link_preview=False,
                 )
 
         elif event.query.user_id == bot.uid and query == "pm_warn":
-            Mika_sa = Mikasa_FIRST.format(mikasa_mention, mssge)
+            hel_l = MIKASA_FIRST.format(mikasa_mention, mssge)
             result = builder.photo(
                 file=mikasa_pic,
                 text=hel_l,
@@ -181,10 +180,10 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         elif event.query.user_id == bot.uid and query == "repo":
             result = builder.article(
                 title="Repository",
-                text=f"**⚡ ʟɛɢɛռɖǟʀʏ ǟʄ ʍɨӄǟֆǟ ⚡**",
+                text=f"**⚡ ʟɛɢɛռɖaʀʏ ᴀғ ʍɨӄǟֆǟ ẞø† ⚡**",
                 buttons=[
-                    [Button.url("📑 Repo 📑", "https://t.me/Mikasa_bot_support")],
-                    [Button.url("🚀 Deploy 🚀", "hehe boi")],
+                    [Button.url("📑 Repo 📑", "https://t.me/mikasa_bot_op")],
+                    [Button.url("🚀 Deploy 🚀", "t.me/mikasa_bot_support")],
                 ],
             )
 
@@ -199,21 +198,21 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
 
         else:
             result = builder.article(
-                "@MIKASA_BOT_OP",
-                text="""**Hey! This is [ʍɨӄǟֆǟ ẞø†](https://t.me/MIKASA_BOT_OP) \nYou can know more about me from the links given below 👇**""",
+                "@Its_HellBot",
+                text="""**Hey! This is [ʍɨӄǟֆǟ ẞø†](https://t.me/mikasa_bot_op) \nYou can know more about me from the links given below 👇**""",
                 buttons=[
                     [
-                        custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/MIKASA_BOT_OP"),
+                        custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/mikasa_bot_op"),
                         custom.Button.url(
-                            "⚡ GROUP ⚡", "https://t.me/Mikasa_bot_support"
+                            "⚡ GROUP ⚡", "https://t.me/mikasa_bot_support"
                         ),
                     ],
                     [
                         custom.Button.url(
-                            "✨ REPO ✨", "https://github.com/TEAM-MISAKA/MISAKA-BOT"),
+                            "✨ REPO ✨", "https://github.com/TEAM-MIKASA/MIKASA-BOT"),
                         custom.Button.url
                     (
-                            "🔰 TUTORIAL 🔰", ""
+                            "🔰 TUTORIAL 🔰", "t.me/mikasa_bot_op"
                     )
                     ],
                 ],
@@ -294,17 +293,17 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"unmute")))
     async def on_pm_click(event):
         hunter = (event.data_match.group(1)).decode("UTF-8")
-        mikasa = hunter.split("+")
-        if not event.sender_id == int(mikasa[0]):
+        hell = hunter.split("+")
+        if not event.sender_id == int(hell[0]):
             return await event.answer("This Ain't For You!!", alert=True)
         try:
-            await bot(GetParticipantRequest(int(mikasa[1]), int(mikasa[0])))
+            await bot(GetParticipantRequest(int(hell[1]), int(hell[0])))
         except UserNotParticipantError:
             return await event.answer(
                 "You need to join the channel first.", alert=True
             )
         await bot.edit_permissions(
-            event.chat_id, int(mikasa[0]), send_message=True, until_date=None
+            event.chat_id, int(hell[0]), send_message=True, until_date=None
         )
         await event.edit("Yay! You can chat now !!")
 
@@ -332,8 +331,8 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"close")))
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid or event.query.user_id in Config.SUDO_USERS:
-            veriler = custom.Button.inline(f"{mikasa_emoji} Re-Open Menu {mikasa_emoji}", data="reopen")
-            await event.edit(f"**⚜️ ʍɨӄǟֆǟ ẞø† Mêñû Prõvîdêr ìs ñôw Çlösëd ⚜️**\n\n**Bot Of :**  {mikasa_mention}\n\n        [©️ ʍɨӄǟֆǟ ẞø† ™️]({chnl_link})", buttons=veriler, link_preview=False)
+            veriler = custom.Button.inline(f"{hell_emoji} Re-Open Menu {hell_emoji}", data="reopen")
+            await event.edit(f"**⚜️ ʍɨӄǟֆǟ ẞø† Mêñû Prõvîdêr ìs ñôw Çlösëd ⚜️**\n\n**Bot Of :**  {mikasa_mention}\n\n        [©️ ʍɨӄǟֆǟ ẞø† ™️](t.me/mikasa_bot_op)", buttons=veriler, link_preview=False)
         else:
             reply_pop_up_alert = "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © ʍɨӄǟֆǟ ẞø† ™"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
@@ -436,4 +435,4 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
 
 
-# MikasaBot
+# Mikasa bot
