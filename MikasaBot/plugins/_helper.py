@@ -18,8 +18,8 @@ botname = Config.BOT_USERNAME
 @bot.on(sudo_cmd(pattern="repo$", allow_sudo=True))
 async def repo(event):
     try:
-        mikasa = await bot.inline_query(botname, "repo")
-        await mikasa[0].click(event.chat_id)
+        hell = await bot.inline_query(botname, "repo")
+        await hell[0].click(event.chat_id)
         if event.sender_id == officialsameer:
             await event.delete()
     except (noin, dedbot):
