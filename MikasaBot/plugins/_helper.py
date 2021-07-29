@@ -7,9 +7,9 @@ from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 from . import *
 
 msg = f"""
-**⚡ ʟɛɢɛռɖaʀʏ ᴀғ ɦɛʟʟɮօt ⚡**
-  •        [📑 Repo 📑](https://github.com/The-HellBot/HellBot)
-  •        [🚀 Deploy 🚀](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FThe-HellBot%2FHellBot&template=https%3A%2F%2Fgithub.com%2Fthe-mikasabot%2Fmikasabot)
+**⚡ LEGENDRY AF MIKASA ⚡**
+  •        [📑 Repo 📑](https://github.com/TEAM-MIKASA/MIKASA-BOT)
+  •        [🚀 Deploy 🚀](t.me/mikasa_bot_op)
   •  ©️ {mikasa_channel} ™
 """
 botname = Config.BOT_USERNAME
@@ -20,7 +20,7 @@ async def repo(event):
     try:
         mikasa = await bot.inline_query(botname, "repo")
         await mikasa[0].click(event.chat_id)
-        if event.sender_id == ForGo10God:
+        if event.sender_id == officialsameer:
             await event.delete()
     except (noin, dedbot):
         await eor(event, msg)
@@ -40,7 +40,7 @@ async def yardim(event):
     except:
         pass
     if tgbotusername is not None:
-        results = await event.client.inline_query(tgbotusername, "mikasabot_help")
+        results = await event.client.inline_query(tgbotusername, "hellbot_help")
         await results[0].click(
             event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
         )
