@@ -10,7 +10,7 @@ msg = f"""
 **⚡ LEGENDRY AF MIKASA BOT ⚡**
   •        [📑 Repo 📑](https://github.com/TEAM-MIKASA/MIKASA-BOT)
   •        [🚀 Deploy 🚀](t.me/mikasa_bot_op)
-  •  ©️ {hell_channel} ™
+  •  ©️ {mikasa_channel} ™
 """
 botname = Config.BOT_USERNAME
 
