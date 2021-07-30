@@ -20,7 +20,7 @@ async def repo(event):
     try:
         Mikasa = await bot.inline_query(botname, "repo")
         await mikasa[0].click(event.chat_id)
-        if event.sender_id == officialsameer:
+        if event.sender_id == officialsameer: 
             await event.delete()
     except (noin, dedbot):
         await eor(event, msg)
