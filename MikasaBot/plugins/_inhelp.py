@@ -19,7 +19,7 @@ from . import *
 
 mikasa_row = Config.BUTTONS_IN_HELP
 mikasa_emoji = Config.EMOJI_IN_HELP
-mikasa_pic = Config.PMPERMIT_PIC or "https://telegra.ph/file/58df4d86400922aa32acd.jpg"
+mikasa_pic = Config.PMPERMIT_PIC
 cstm_pmp = Config.CUSTOM_PMPERMIT
 ALV_PIC = Config.ALIVE_PIC
 
@@ -43,7 +43,7 @@ USER_BOT_WARN_ZERO = "Enough Of Your Flooding In My Master's PM!! \n\n**🚫 Blo
 HELL_FIRST = (
     "**🔥 MIKASA BOT SECURITY 🔥**\n\nThis is to inform you that "
     "{} is currently unavailable.\nThis is an automated message.\n\n"
-    "{}\n\n**Please Choose Why You Are Here!!**".format(hell_mention, mssge))
+    "{}\n\n**Please Choose Why You Are Here!!**".format(mikasa_mention, mssge))
 
 alive_txt = """
 **⚜️ MIKASA IS ONLINE ⚜️**
@@ -70,7 +70,7 @@ def button(page, modules):
     for pairs in pairs[page]:
         buttons.append(
             [
-                custom.Button.inline(f"{hell_emoji} " + pair + f" {mikasa_emoji}", data=f"Information[{page}]({pair})")
+                custom.Button.inline(f"{mikasa_emoji} " + pair + f" {mikasa_emoji}", data=f"Information[{page}]({pair})")
                 for pair in pairs
             ]
         )
